@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fairuz Samsuddin - Professional Profile</title>
+    <title>Fairuz Samsuddin PruBSN Takaful</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -11,10 +11,9 @@
     <style>
         html { scroll-behavior: smooth; }
         
-        /* Clean, professional off-white background */
         body { 
             font-family: 'Poppins', sans-serif; 
-            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             display: flex; 
             justify-content: center; 
             padding: 40px 20px;
@@ -25,27 +24,23 @@
             background: white; 
             padding: 40px 30px; 
             border-radius: 24px; 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08); 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
             max-width: 400px; 
             width: 100%; 
             text-align: center; 
             box-sizing: border-box;
         }
-        
-        /* Profile Ring updated to Prudential Red */
         .profile-pic { 
             width: 120px; 
             height: 120px; 
             border-radius: 50%; 
             object-fit: cover; 
             margin-bottom: 10px;
-            border: 4px solid #ED1B2E;
-            box-shadow: 0 5px 15px rgba(237, 27, 46, 0.15);
+            border: 4px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         h1 { margin: 10px 0 5px 0; font-size: 24px; color: #1a1a1a; font-weight: 700; }
-        
-        /* Subtitle updated to Prudential Red */
-        .subtitle { color: #ED1B2E; font-weight: 600; font-size: 14px; margin-top: 0; margin-bottom: 20px; }
+        .subtitle { color: #d32f2f; font-weight: 600; font-size: 14px; margin-top: 0; margin-bottom: 20px; }
         
         .social-row { display: flex; justify-content: center; gap: 15px; margin-bottom: 25px; }
         .social-icon {
@@ -53,7 +48,7 @@
             width: 40px; height: 40px; border-radius: 50%; background: #f0f2f5;
             color: #333; text-decoration: none; font-size: 18px; transition: all 0.2s ease;
         }
-        .social-icon:hover { background: #ED1B2E; color: white; transform: scale(1.1); }
+        .social-icon:hover { background: #e4e6eb; transform: scale(1.1); }
         
         .company-logo { max-width: 180px; height: auto; margin-bottom: 20px; }
         .bio-text { color: #555; margin-bottom: 30px; line-height: 1.6; font-size: 14px; }
@@ -64,24 +59,20 @@
             padding: 14px; border-radius: 50px; font-weight: 600; font-size: 15px;
             border: 1px solid #e1e4e8; transition: all 0.2s ease; cursor: pointer;
         }
-        .link-btn:hover { background: #fdf3f4; border-color: #ED1B2E; color: #ED1B2E; }
-        
-        /* WhatsApp Green retained for highest conversion */
-        .whatsapp-btn { background: #25D366; color: white; border: none; }
-        .whatsapp-btn:hover { background: #1ebd5a; color: white; }
+        .link-btn:hover { background: #e9ecef; }
+        .whatsapp-btn { background: #075E54; color: white; border: none; }
+        .whatsapp-btn:hover { background: #128C7E; }
         
         .features-row { display: flex; justify-content: center; gap: 10px; margin-bottom: 35px; }
         .feature-item {
             font-size: 11px; font-weight: 600; color: #444; display: flex;
             flex-direction: column; align-items: center; gap: 5px; flex: 1;
         }
-        
-        /* Feature Icons use BSN Teal */
-        .feature-item i { font-size: 18px; color: #00A599; background: #e6f6f5; padding: 10px; border-radius: 50%; }
+        .feature-item i { font-size: 18px; color: #0070f3; background: #e1f0ff; padding: 10px; border-radius: 50%; }
 
         .section-title { text-align: left; font-size: 18px; font-weight: 700; margin-bottom: 5px; }
         .section-subtitle { text-align: left; font-size: 12px; color: #777; margin-bottom: 20px; }
-        .section-subtitle i { color: #ED1B2E; }
+        .section-subtitle i { color: #d32f2f; }
         
         .grid-container { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 40px; }
         .grid-card {
@@ -90,53 +81,51 @@
             display: flex; flex-direction: column; align-items: center; gap: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: all 0.2s ease; cursor: pointer;
         }
-        .grid-card:hover { border-color: #ED1B2E; transform: translateY(-3px); }
-        
-        /* Active Cards use Prudential Red */
-        .grid-card.active { border-color: #ED1B2E; background-color: #fdf3f4; transform: translateY(-3px); box-shadow: 0 8px 15px rgba(237, 27, 46, 0.15); }
-        .grid-card i { font-size: 20px; color: #ED1B2E; }
+        .grid-card:hover { border-color: #0070f3; transform: translateY(-3px); }
+        .grid-card.active { border-color: #0070f3; background-color: #f0f7ff; transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0, 112, 243, 0.15); }
+        .grid-card i { font-size: 20px; color: #d32f2f; }
 
+        /* --- ADVANCED FORM STYLING --- */
         .form-section {
             background: #fff; padding: 30px 0 10px 0; text-align: left; margin-bottom: 30px;
             border-top: 1px solid #eee;
         }
-        
-        /* Form Badge updated to brand colors */
         .badge {
-            background: #fdf3f4; color: #ED1B2E; padding: 6px 16px; border: 1px solid #fbd8db;
+            background: #fff8e1; color: #f5b041; padding: 6px 16px; border: 1px solid #fce4b3;
             border-radius: 20px; font-size: 11px; font-weight: 700; display: inline-block; margin-bottom: 15px;
         }
         .form-section h3 { font-size: 20px; margin: 0 0 10px 0; color: #1a1a1a; text-align: center; }
         .form-section p { font-size: 12px; margin-bottom: 25px; color: #777; text-align: center; }
         
+        /* Grid Layout for Form Fields */
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px; }
         .form-group { display: flex; flex-direction: column; margin-bottom: 15px; }
         
+        /* Labels & Required Asterisk */
         .form-label { font-size: 12px; font-weight: 600; color: #333; margin-bottom: 6px; }
-        .required { color: #ED1B2E; }
+        .required { color: #f5b041; }
         
+        /* Inputs & Selects */
         input[type="text"], input[type="number"], select, textarea {
             width: 100%; padding: 12px; border: 1px solid #e1e4e8; border-radius: 8px;
             box-sizing: border-box; font-family: inherit; font-size: 13px; background-color: #fff;
             color: #333;
         }
         input::placeholder, textarea::placeholder { color: #adb5bd; }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: #0070f3; }
         
-        /* Form outlines glow BSN Teal on focus */
-        input:focus, select:focus, textarea:focus { outline: none; border-color: #00A599; box-shadow: 0 0 0 3px rgba(0, 165, 153, 0.1); }
-        
+        /* Radio Buttons */
         .radio-group { display: flex; gap: 15px; align-items: center; margin-top: 5px; }
         .radio-group label { font-size: 13px; color: #333; font-weight: 400; cursor: pointer; display: flex; align-items: center; gap: 6px; }
-        .radio-group input[type="radio"] { width: auto; margin: 0; cursor: pointer; accent-color: #ED1B2E; }
+        .radio-group input[type="radio"] { width: auto; margin: 0; cursor: pointer; accent-color: #0070f3; }
         
         textarea { resize: vertical; min-height: 80px; }
 
-        /* Submit Button updated to Prudential Red */
         .form-submit-btn {
             width: 100%; padding: 14px; border-radius: 8px; font-size: 15px;
-            font-weight: 600; cursor: pointer; margin-top: 10px; background: #ED1B2E; color: white; border: none;
+            font-weight: 600; cursor: pointer; margin-top: 10px; background: #00a676;
         }
-        .form-submit-btn:hover { background: #c81625; }
+        .form-submit-btn:hover { background: #008f65; }
         
         .footer { border-top: 1px solid #eee; padding-top: 20px; font-size: 10px; color: #999; line-height: 1.6; text-align: center; }
     </style>
@@ -150,13 +139,13 @@
         <p class="subtitle">Your No 1 Takaful Consultant</p>
 
         <div class="social-row">
-            <a href="#" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-icon" target="_blank"><i class="fa-brands fa-threads"></i></a>
-            <a href="#" class="social-icon" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/fairuz.samsuddin" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/rigidius/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://threads.net/@rigidius" class="social-icon" target="_blank"><i class="fa-brands fa-threads"></i></a>
+            <a href="https://tiktok.com/@rigidius" class="social-icon" target="_blank"><i class="fab fa-tiktok"></i></a>
         </div>
 
-        <img src="company-logo.jpg" alt="Company Logo" class="company-logo" onerror="this.style.display='none'">
+        <img src="company-logo.JPG" alt="Company Logo" class="company-logo" onerror="this.style.display='none'">
 
         <p class="bio-text">Sedia bantu tuan/puan untuk dapatkan consultation & quotation takaful yang comprehensive</p>
         
@@ -174,6 +163,7 @@
         <h2 class="section-title">Pilihan Yang Boleh Disemak</h2>
         <p class="section-subtitle"><i class="fas fa-hand-pointer"></i> Klik kad untuk pilih</p>
         
+        <!-- Interactive Grid -->
         <div class="grid-container" id="planGrid">
             <div class="grid-card" onclick="selectPlan('Medical Card', this)">
                 <i class="fas fa-heartbeat"></i><span>Medical Card</span>
@@ -189,11 +179,12 @@
             </div>
         </div>
 
+        <!-- REPLICATED FORM SECTION -->
         <div class="form-section" id="borang-semakan">
             <div style="text-align: center;">
                 <span class="badge">KONSULTASI PERCUMA</span>
                 <h3>Semak Pelan Takaful Sesuai</h3>
-                <p>Isi butiran ringkas di bawah. Mesej draf akan dihantar terus ke WhatsApp <strong>Fairuz Samsuddin</strong>.</p>
+                <p>Isi butiran ringkas di bawah. Mesej draf akan dihantar terus ke WhatsApp <strong>[Your Name]</strong>.</p>
             </div>
             
             <form id="takafulForm">
@@ -297,13 +288,13 @@
                     <textarea id="clientMessage" placeholder="Tulis soalan atau nota khas anda di sini..."></textarea>
                 </div>
 
-                <button type="submit" class="form-submit-btn">Hantar Ke WhatsApp</button>
+                <button type="submit" class="link-btn form-submit-btn whatsapp-btn">Hantar Ke WhatsApp</button>
             </form>
         </div>
 
         <div class="footer">
-            <p>© 2026 Fairuz Samsuddin. Hak Cipta Terpelihara.<br>
-            Pengantara Takaful Berdaftar dengan Prudential BSN Takaful Berhad.</p>
+            <p>© 2026 [Your Name]. Hak Cipta Terpelihara.<br>
+            Pengantara Takaful Berdaftar dengan [Your Company Name] Berhad.</p>
         </div>
 
     </div>
@@ -325,6 +316,7 @@
         document.getElementById('takafulForm').addEventListener('submit', function(e) {
             e.preventDefault(); 
             
+            // Gather all new field data
             var name = document.getElementById('clientName').value;
             var dob = document.getElementById('clientDob').value;
             var phone = document.getElementById('clientPhone').value;
@@ -338,8 +330,10 @@
             var policy = document.querySelector('input[name="polisiAktif"]:checked').value;
             var addMessage = document.getElementById('clientMessage').value;
             
+            // ---> UPDATE YOUR PHONE NUMBER HERE <---
             var phoneNumber = "60176213432"; 
             
+            // Build the comprehensive WhatsApp message
             var message = "Hai, saya berminat untuk buat semakan pelan Takaful percuma. Ini butiran saya:\n\n" +
                           "👤 *Nama:* " + name + "\n" +
                           "📅 *Tarikh Lahir:* " + dob + "\n" +
@@ -351,6 +345,7 @@
                           "🛡️ *Pelan Pilihan:* " + plan + "\n" +
                           "📋 *Polisi Aktif:* " + policy;
             
+            // Append optional message if they wrote one
             if(addMessage.trim() !== "") {
                 message += "\n\n📝 *Nota Tambahan:*\n" + addMessage;
             } else {
