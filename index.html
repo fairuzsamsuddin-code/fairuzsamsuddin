@@ -70,8 +70,15 @@
         }
         .social-icon:hover { background: #ED1B2E; color: white; transform: scale(1.1); }
         
-        .company-logo { max-width: 180px; height: auto; margin-bottom: 20px; }
-        .bio-text { color: #555; margin-bottom: 30px; line-height: 1.6; font-size: 14px; }
+        .bio-text { color: #555; margin-bottom: 15px; line-height: 1.6; font-size: 14px; }
+
+        /* Company Logo styling adjusted to fit below the bio text */
+        .company-logo { 
+            max-width: 180px; 
+            height: auto; 
+            margin: 0 auto 25px auto; 
+            display: block; 
+        }
         
         .btn-row { display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px; }
         .link-btn { 
@@ -199,11 +206,12 @@
             <a href="https://www.instagram.com/rigidius/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://threads.net/@rigidius" class="social-icon" target="_blank"><i class="fa-brands fa-threads"></i></a>
             <a href="https://tiktok.com/@rigidius" class="social-icon" target="_blank"><i class="fab fa-tiktok"></i></a>
-        </div>
-
-            <img src="company-logo.jpg" alt="Company Logo" class="company-logo" onerror="this.style.display='none'">
+            </div>
 
             <p class="bio-text">Sedia bantu tuan/puan untuk dapatkan consultation & quotation takaful yang comprehensive</p>
+            
+            <!-- Logo Syarikat diletakkan di sini -->
+            <img src="company-logo.JPG" alt="Company Logo" class="company-logo" onerror="this.style.display='none'">
             
             <div class="btn-row">
                 <a href="#borang-semakan" class="link-btn"><i class="fas fa-clipboard-check"></i> Semak Pelan Sesuai</a>
