@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fairuz Samsuddin-Professional Profile</title>
+    <title>Fairuz Samsuddin-Professional Profile - Portal Servis</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -13,218 +13,339 @@
         
         body { 
             font-family: 'Poppins', sans-serif; 
-            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            background: #fdfcfc; /* Clean, light background */
             display: flex; 
-            justify-content: center; 
-            padding: 40px 20px;
+            flex-direction: column;
+            align-items: center; 
+            padding: 0;
             margin: 0;
             min-height: 100vh;
-        }
-        
-        /* Card padding removed and overflow hidden added to keep header corners round */
-        .card { 
-            background: white; 
-            border-radius: 24px; 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08); 
-            max-width: 400px; 
-            width: 100%; 
-            text-align: center; 
-            box-sizing: border-box;
-            overflow: hidden; 
-            transition: all 0.3s ease; /* Smooth transition when rotating */
-        }
-        
-        /* The PruBSN Teal Header */
-        .card-header {
-            background: #00A599; 
-            height: 120px;
-            width: 100%;
+            color: #333;
         }
 
-        /* Content wrapper to handle the padding below the header */
-        .card-content {
-            padding: 0 30px 40px 30px;
+        /* --- Page Header Section (Portal Header Look) --- */
+        .page-header {
+            background-color: #f8f9fa;
+            width: 100%;
+            padding: 20px 40px;
+            box-sizing: border-box;
+            border-bottom: 2px solid #D9000D; /* Precise PruBSN Red from reference */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header-text {
+            text-align: center;
+        }
+        .header-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0;
+            color: #555;
+        }
+        .header-subtitle {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 5px 0 0 0;
+            color: #1a1a1a;
+        }
+
+        /* Main content area */
+        .page-content {
+            width: 100%;
+            max-width: 1100px;
+            padding: 40px 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        /* --- Profile Card Section (Structured Card Look) --- */
+        .profile-section {
+            background: white; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+            padding: 30px;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 25px;
+            align-items: center;
         }
         
-        /* Profile Ring updated to overlap the header */
+        .profile-pic-container {
+            width: 180px;
+            height: 180px;
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e1e4e8;
+        }
         .profile-pic { 
-            width: 120px; 
-            height: 120px; 
-            border-radius: 50%; 
+            width: 100%; 
+            height: 100%; 
             object-fit: cover; 
-            border: 4px solid #fff;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin-top: -60px; /* This pulls the image up into the header */
-            position: relative;
-            background: white;
         }
+
+        .profile-details {
+            text-align: left;
+        }
+        h1 { margin: 0 0 10px 0; font-size: 32px; color: #1a1a1a; font-weight: 700; }
+        .subtitle { color: #D9000D; font-weight: 600; font-size: 16px; margin: 0 0 15px 0; }
         
-        h1 { margin: 15px 0 5px 0; font-size: 24px; color: #1a1a1a; font-weight: 700; }
-        .subtitle { color: #ED1B2E; font-weight: 600; font-size: 14px; margin-top: 0; margin-bottom: 20px; }
-        
-        .social-row { display: flex; justify-content: center; gap: 15px; margin-bottom: 25px; }
+        .social-row { display: flex; justify-content: start; gap: 10px; margin-bottom: 20px; }
         .social-icon {
             display: flex; align-items: center; justify-content: center;
-            width: 40px; height: 40px; border-radius: 50%; background: #f0f2f5;
-            color: #333; text-decoration: none; font-size: 18px; transition: all 0.2s ease;
+            width: 36px; height: 36px; border-radius: 50%; background: #f0f2f5;
+            color: #333; text-decoration: none; font-size: 16px; transition: all 0.2s ease;
         }
-        .social-icon:hover { background: #ED1B2E; color: white; transform: scale(1.1); }
+        .social-icon:hover { background: #D9000D; color: white; transform: scale(1.1); }
         
-        .bio-text { color: #555; margin-bottom: 15px; line-height: 1.6; font-size: 14px; }
-
-        /* Company Logo styling adjusted to fit below the bio text */
+        .bio-text { color: #555; margin-bottom: 20px; line-height: 1.6; font-size: 14px; }
         .company-logo { 
-            max-width: 180px; 
+            max-width: 160px; 
             height: auto; 
-            margin: 0 auto 25px auto; 
+            margin: 0 0 20px 0; 
             display: block; 
         }
         
-        .btn-row { display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px; }
+        .btn-row { display: flex; flex-direction: row; gap: 12px; margin-bottom: 0; justify-content: start; width: 100%;}
         .link-btn { 
-            display: block; background: #f8f9fa; color: #333; text-decoration: none; 
-            padding: 14px; border-radius: 50px; font-weight: 600; font-size: 15px;
-            border: 1px solid #e1e4e8; transition: all 0.2s ease; cursor: pointer;
+            display: block; background: #D9000D; color: white; text-decoration: none; 
+            padding: 12px 24px; border-radius: 50px; font-weight: 600; font-size: 15px;
+            border: none; transition: all 0.2s ease; cursor: pointer; text-align: center;
+            box-sizing: border-box; flex: 1; /* side by side */
         }
-        .link-btn:hover { background: #fdf3f4; border-color: #ED1B2E; color: #ED1B2E; }
+        .link-btn:hover { background: #c81625; }
         
-        .whatsapp-btn { background: #25D366; color: white; border: none; }
-        .whatsapp-btn:hover { background: #1ebd5a; color: white; }
+        /* The specific whatsapp styling is moved to the class directly */
+        .whatsapp-btn { background: #25D366; }
+        .whatsapp-btn:hover { background: #1ebd5a; }
         
-        .features-row { display: flex; justify-content: center; gap: 10px; margin-bottom: 35px; }
+        /* --- Features Section (Timeline Look) --- */
+        .features-section {
+            background: white; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+            padding: 40px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .timeline-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: start;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 25px; /* adjust based on node size */
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background-color: #008183; /* corporate teal */
+            z-index: 1;
+        }
         .feature-item {
-            font-size: 11px; font-weight: 600; color: #444; display: flex;
-            flex-direction: column; align-items: center; gap: 5px; flex: 1;
+            font-size: 14px; font-weight: 600; color: #444; display: flex;
+            flex-direction: column; align-items: center; gap: 15px; flex: 1;
+            z-index: 2;
         }
-        .feature-item i { font-size: 18px; color: #00A599; background: #e6f6f5; padding: 10px; border-radius: 50%; }
+        .feature-item i { 
+            font-size: 18px; color: white; background: #008183; 
+            padding: 12px; border-radius: 50%; width: 45px; height: 45px;
+            display: flex; align-items: center; justify-content: center;
+            box-sizing: border-box;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .feature-item span { margin-top: 5px; }
 
-        .section-title { text-align: left; font-size: 18px; font-weight: 700; margin-bottom: 5px; }
-        .section-subtitle { text-align: left; font-size: 12px; color: #777; margin-bottom: 20px; }
-        .section-subtitle i { color: #ED1B2E; }
+        /* --- Selection Grid Section (Corporate Grid Look) --- */
+        .selection-section {
+            background: white; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+            padding: 40px;
+            box-sizing: border-box;
+        }
+        .section-header { margin-bottom: 30px;}
+        .section-title { text-align: left; font-size: 24px; font-weight: 700; margin: 0 0 5px 0; color: #1a1a1a;}
+        .section-subtitle { text-align: left; font-size: 14px; color: #777; margin: 0; }
+        .section-subtitle i { color: #D9000D; }
         
-        .grid-container { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 40px; }
+        .grid-container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
         .grid-card {
-            background: #fff; border: 1px solid #eaeaea; padding: 15px 10px;
-            border-radius: 12px; font-size: 13px; font-weight: 600; color: #333;
-            display: flex; flex-direction: column; align-items: center; gap: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: all 0.2s ease; cursor: pointer;
+            background: #fff; border: 1px solid #eaeaea; padding: 25px 15px;
+            border-radius: 12px; font-size: 15px; font-weight: 600; color: #333;
+            display: flex; flex-direction: column; align-items: center; gap: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: all 0.2s ease; cursor: pointer;
+            text-align: center;
         }
-        .grid-card:hover { border-color: #ED1B2E; transform: translateY(-3px); }
-        .grid-card.active { border-color: #ED1B2E; background-color: #fdf3f4; transform: translateY(-3px); box-shadow: 0 8px 15px rgba(237, 27, 46, 0.15); }
-        .grid-card i { font-size: 20px; color: #ED1B2E; }
+        .grid-card:hover { border-color: #D9000D; transform: translateY(-2px); }
+        .grid-card.active { border-color: #D9000D; background-color: #fdfcfc; transform: translateY(-2px); box-shadow: 0 6px 12px rgba(217, 0, 13, 0.1); }
+        .grid-card i { font-size: 24px; color: #D9000D; }
 
+        /* --- Form Section (Structured, red banner look) --- */
         .form-section {
-            background: #fff; padding: 30px 0 10px 0; text-align: left; margin-bottom: 30px;
-            border-top: 1px solid #eee;
+            background: white; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+            padding: 0;
+            overflow: hidden;
+            box-sizing: border-box;
+            border: 1px solid #eaeaea;
         }
-        
+        .form-top {
+            background-color: #D9000D;
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+        }
         .badge {
-            background: #fdf3f4; color: #ED1B2E; padding: 6px 16px; border: 1px solid #fbd8db;
-            border-radius: 20px; font-size: 11px; font-weight: 700; display: inline-block; margin-bottom: 15px;
+            background: #fbd8db; color: #D9000D; padding: 8px 18px;
+            border-radius: 20px; font-size: 12px; font-weight: 700; display: inline-block; margin-bottom: 15px;
         }
-        .form-section h3 { font-size: 20px; margin: 0 0 10px 0; color: #1a1a1a; text-align: center; }
-        .form-section p { font-size: 12px; margin-bottom: 25px; color: #777; text-align: center; }
+        .form-top h3 { font-size: 24px; margin: 0 0 10px 0; color: white; }
+        .form-top p { font-size: 14px; margin: 0; color: white; opacity: 0.9; }
         
-        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px; }
-        .form-group { display: flex; flex-direction: column; margin-bottom: 15px; }
+        .form-content { padding: 40px; text-align: left; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+        .form-group { display: flex; flex-direction: column; margin-bottom: 20px; }
         
-        .form-label { font-size: 12px; font-weight: 600; color: #333; margin-bottom: 6px; }
-        .required { color: #ED1B2E; }
+        .form-label { font-size: 14px; font-weight: 600; color: #333; margin-bottom: 8px; }
+        .required { color: #D9000D; }
         
         input[type="text"], input[type="number"], select, textarea {
-            width: 100%; padding: 12px; border: 1px solid #e1e4e8; border-radius: 8px;
-            box-sizing: border-box; font-family: inherit; font-size: 13px; background-color: #fff;
-            color: #333;
+            width: 100%; padding: 14px; border: 1px solid #e1e4e8; border-radius: 8px;
+            box-sizing: border-box; font-family: inherit; font-size: 14px; background-color: #fff;
+            color: #333; transition: all 0.2s ease;
         }
         input::placeholder, textarea::placeholder { color: #adb5bd; }
-        input:focus, select:focus, textarea:focus { outline: none; border-color: #00A599; box-shadow: 0 0 0 3px rgba(0, 165, 153, 0.1); }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: #008183; box-shadow: 0 0 0 3px rgba(0, 129, 131, 0.1); }
         
-        .radio-group { display: flex; gap: 15px; align-items: center; margin-top: 5px; }
-        .radio-group label { font-size: 13px; color: #333; font-weight: 400; cursor: pointer; display: flex; align-items: center; gap: 6px; }
-        .radio-group input[type="radio"] { width: auto; margin: 0; cursor: pointer; accent-color: #ED1B2E; }
+        .radio-group { display: flex; gap: 20px; align-items: center; margin-top: 8px; }
+        .radio-group label { font-size: 14px; color: #333; font-weight: 400; cursor: pointer; display: flex; align-items: center; gap: 8px; }
+        .radio-group input[type="radio"] { width: auto; margin: 0; cursor: pointer; accent-color: #D9000D; }
         
-        textarea { resize: vertical; min-height: 80px; }
+        textarea { resize: vertical; min-height: 100px; }
 
         .form-submit-btn {
-            width: 100%; padding: 14px; border-radius: 8px; font-size: 15px;
-            font-weight: 600; cursor: pointer; margin-top: 10px; background: #ED1B2E; color: white; border: none;
+            width: 100%; padding: 16px; border-radius: 8px; font-size: 16px;
+            font-weight: 600; cursor: pointer; margin-top: 15px; background: #D9000D; color: white; border: none;
         }
         .form-submit-btn:hover { background: #c81625; }
         
-        .footer { border-top: 1px solid #eee; padding-top: 20px; font-size: 10px; color: #999; line-height: 1.6; text-align: center; }
+        /* --- Footer Section (Structured multi-column look) --- */
+        .footer { 
+            background-color: white;
+            border-top: 1px solid #eaeaea; 
+            padding: 40px; 
+            box-sizing: border-box;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            font-size: 12px; 
+            color: #777; 
+            line-height: 1.6; 
+            text-align: center;
+        }
+        .footer-col { text-align: center;}
+        .footer-logo { max-width: 120px; margin-bottom: 10px; }
 
-        /* --- NEW: RESPONSIVE ADAPTATION FOR WIDE & HORIZONTAL SCREENS --- */
+        /* --- RESPONSIVE ADAPTATIONS FOR WIDE & HORIZONTAL SCREENS (Kept same) --- */
         @media (min-width: 650px) {
-            .card {
-                max-width: 800px; /* Expands to fill wider screens */
-            }
-            .btn-row {
-                flex-direction: row; /* Places main buttons side-by-side */
-            }
-            .btn-row .link-btn {
-                flex: 1; /* Makes the buttons equal width */
-            }
-            .grid-container {
-                grid-template-columns: repeat(4, 1fr); /* Snaps 2x2 grid into a 4x1 row */
-            }
+            .page-content { gap: 40px; }
+            .btn-row { flex-direction: row; }
+            .grid-container { grid-template-columns: repeat(4, 1fr); }
         }
 
-        /* Specifically triggers when a mobile phone is held sideways */
+        /* Responsive for mobile screens */
+        @media (max-width: 800px) {
+            .page-header { padding: 15px 20px; flex-direction: column; text-align: center;}
+            .page-content { padding: 20px 15px; gap: 30px; }
+            .profile-section { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+            .profile-details { text-align: center; justify-items: center;}
+            .social-row, .btn-row { justify-content: center; width: 100%; }
+            .btn-row .link-btn { flex: 1; min-width: unset;}
+            .timeline-container { flex-direction: column; gap: 30px; align-items: center; width: 100%;}
+            .timeline-container::before { width: 2px; top: 10%; bottom: 10%; left: 50%; right: unset; height: 80%;}
+            .grid-container { grid-template-columns: 1fr 1fr; gap: 12px;}
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+            .footer { grid-template-columns: 1fr; gap: 15px; padding: 30px; text-align: center;}
+            .footer-col { text-align: center; justify-items: center;}
+        }
+
+        /* Sideways mobile (kept same) */
         @media (orientation: landscape) and (max-width: 900px) {
-            body {
-                padding: 20px 15px; /* Reduces spacing at the top/bottom to save vertical screen space */
-            }
-            .card {
-                max-width: 100%; /* Allows card to completely fill horizontal mobile screen */
-            }
-            .card-header {
-                height: 90px; /* Slightly thinner header to save space on rotated screens */
-            }
-            .profile-pic {
-                width: 100px;
-                height: 100px;
-                margin-top: -50px;
-            }
+            .page-header { flex-direction: row; text-align: center; justify-content: space-around;}
+            .profile-pic-container { width: 120px; height: 120px; }
+            .profile-section { gap: 15px; padding: 20px;}
+            .grid-container { grid-template-columns: repeat(4, 1fr); }
+            .form-row { grid-template-columns: 1fr 1fr; gap: 15px; }
+            .footer { grid-template-columns: repeat(3, 1fr); }
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        
-        <!-- The Header Block -->
-        <div class="card-header"></div>
-        
-        <!-- The Main Content Block -->
-        <div class="card-content">
-            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
-            <h1>Fairuz Samsuddin</h1>
-            <p class="subtitle">Your go-to advisor for honest, reliable Takaful planning</p>
+    <!-- Page Header (New Portal Header) -->
+    <div class="page-header">
+        <div class="header-text">
+            <p class="header-title">Portal Servis</p>
+            <p class="header-subtitle">Fairuz Samsuddin - Professional Profile</p>
+        </div>
+    </div>
 
-            <div class="social-row">
-            <a href="https://www.facebook.com/fairuz.samsuddin" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/rigidius/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://threads.net/@rigidius" class="social-icon" target="_blank"><i class="fa-brands fa-threads"></i></a>
-            <a href="https://tiktok.com/@rigidius" class="social-icon" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <!-- Main Page Content Area -->
+    <div class="page-content">
+
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <div class="profile-pic-container">
+                <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
             </div>
+            <div class="profile-details">
+                <h1>Fairuz Samsuddin</h1>
+                <p class="subtitle">Your go-to advisor for honest, reliable Takaful planning</p>
 
-            <!-- Logo Syarikat diletakkan di sini -->
-            <img src="company-logo.JPG" alt="Company Logo" class="company-logo" onerror="this.style.display='none'">
-            <p class="bio-text">Membantu anda mendapatkan pelan perlindungan Takaful yang lengkap dan jelas</p>
-            
-            <div class="btn-row">
-                <a href="#borang-semakan" class="link-btn"><i class="fas fa-clipboard-check"></i> Semak Pelan Sesuai</a>
-                <a href="https://wa.me/60176213432" class="link-btn whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Saya</a>
+                <div class="social-row">
+                    <a href="https://www.facebook.com/fairuz.samsuddin" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/rigidius/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://threads.net/@rigidius" class="social-icon" target="_blank"><i class="fa-brands fa-threads"></i></a>
+                    <a href="https://tiktok.com/@rigidius" class="social-icon" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+
+                <!-- Company Logo diletakkan di sini, formally styled -->
+                <img src="company-logo.JPG" alt="Company Logo" class="company-logo" onerror="this.style.display='none'">
+                
+                <p class="bio-text">Membantu anda mendapatkan pelan perlindungan Takaful yang lengkap dan jelas</p>
+                
+                <div class="btn-row">
+                    <a href="#borang-semakan" class="link-btn"><i class="fas fa-clipboard-check"></i> Semak Pelan Sesuai</a>
+                    <a href="https://wa.me/60176213432" class="link-btn whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Saya</a>
+                </div>
             </div>
+        </div>
 
-            <div class="features-row">
+        <!-- Features Section (Timeline Style) -->
+        <div class="features-section">
+            <div class="timeline-container">
                 <div class="feature-item"><i class="fas fa-shield-halved"></i><span>Patuh Syariah</span></div>
                 <div class="feature-item"><i class="fas fa-mug-hot"></i><span>Sesi Santai</span></div>
                 <div class="feature-item"><i class="fas fa-wallet"></i><span>Bajet Mesra</span></div>
             </div>
+        </div>
 
-            <h2 class="section-title">Pilihan Yang Boleh Disemak</h2>
-            <p class="section-subtitle"><i class="fas fa-hand-pointer"></i> Klik kad untuk pilih</p>
+        <!-- Selection Grid Section -->
+        <div class="selection-section">
+            <div class="section-header">
+                <h2 class="section-title">Pilihan Yang Boleh Disemak</h2>
+                <p class="section-subtitle"><i class="fas fa-hand-pointer"></i> Klik kad untuk pilih</p>
+            </div>
             
             <div class="grid-container" id="planGrid">
                 <div class="grid-card" onclick="selectPlan('Medical Card', this)">
@@ -240,14 +361,17 @@
                     <i class="fas fa-user-md"></i><span>Sakit Kritikal</span>
                 </div>
             </div>
+        </div>
 
-            <div class="form-section" id="borang-semakan">
-                <div style="text-align: center;">
-                    <span class="badge">KONSULTASI PERCUMA</span>
-                    <h3>Semak Pelan Takaful Sesuai</h3>
-                    <p>Isi butiran ringkas di bawah. Mesej draf akan dihantar terus ke WhatsApp <strong>Fairuz Samsuddin</strong>.</p>
-                </div>
-                
+        <!-- Form Section (Structured, red banner) -->
+        <div class="form-section" id="borang-semakan">
+            <div class="form-top">
+                <span class="badge">KONSULTASI PERCUMA</span>
+                <h3>Semak Pelan Takaful Sesuai</h3>
+                <p>Isi butiran ringkas di bawah. Mesej draf akan dihantar terus ke WhatsApp <strong>Fairuz Samsuddin</strong>.</p>
+            </div>
+            
+            <div class="form-content">
                 <form id="takafulForm">
                     
                     <div class="form-row">
@@ -352,15 +476,25 @@
                     <button type="submit" class="form-submit-btn">Hantar Ke WhatsApp</button>
                 </form>
             </div>
+        </div>
 
-            <div class="footer">
-                <p>© 2026 Fairuz Samsuddin. Hak Cipta Terpelihara.<br>
-                Perunding Takaful Berdaftar dengan Prudential BSN Takaful Berhad.</p>
-            </div>
-            
+    </div>
+
+    <!-- Footer (Formal Multi-column) -->
+    <div class="footer">
+        <div class="footer-col">
+            <img src="company-logo.JPG" alt="Company Logo" class="footer-logo" onerror="this.style.display='none'">
+            <p>Perunding Takaful Berdaftar dengan Prudential BSN Takaful Berhad.</p>
+        </div>
+        <div class="footer-col">
+            <p>© 2026 Fairuz Samsuddin. Hak Cipta Terpelihara.</p>
+        </div>
+        <div class="footer-col">
+            <p>Portal Servis Resmi</p>
         </div>
     </div>
 
+    <!-- SCRIPT (Identical functionality) -->
     <script>
         function selectPlan(planName, clickedElement) {
             var cards = document.querySelectorAll('.grid-card');
