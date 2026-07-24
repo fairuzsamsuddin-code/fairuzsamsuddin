@@ -262,7 +262,14 @@
             box-sizing: border-box;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        .feature-item span { margin-top: 5px; }
+        .feature-item span { 
+            margin-top: 5px; 
+            background-color: white; /* Adds a background block */
+            padding: 4px 12px;       /* Pushes the line away from the text */
+            border-radius: 6px;      /* Softens the edges of the background block */
+            position: relative; 
+            z-index: 2;              /* Ensures the text stays above the line */
+        }
 
         /* --- Selection Grid Section (Corporate Grid Look) --- */
         .selection-section {
