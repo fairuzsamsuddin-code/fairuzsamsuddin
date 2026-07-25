@@ -42,7 +42,9 @@
         
         .form-input { @apply block w-full border px-4 py-2 h-12 rounded-xl border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary text-sm transition-colors; }
         .form-label { @apply text-sm font-semibold text-gray-700 mb-2 block; }
-        .btn-primary { @apply inline-flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer transition-transform hover:-translate-y-0.5 bg-primary text-white hover:bg-primary-hover h-12 rounded-xl px-8 text-sm font-semibold shadow-elegant; }
+        
+        /* Updated btn-primary: rounded-full (pill shape), taller min-h-[3.5rem], scales text better */
+        .btn-primary { @apply inline-flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer transition-transform hover:-translate-y-0.5 bg-primary text-white hover:bg-primary-hover min-h-[3.5rem] rounded-full px-8 text-sm md:text-base font-semibold shadow-elegant; }
         
         .grid-card { @apply bg-white border border-gray-200 p-6 rounded-2xl flex flex-col items-center gap-3 shadow-sm transition-all cursor-pointer hover:-translate-y-1 hover:border-primary; text-align: center; }
         .grid-card i { @apply text-3xl text-primary; }
@@ -113,11 +115,12 @@
 
                 <p class="text-gray-500 mt-5 text-sm md:text-base leading-relaxed">Membantu anda mendapatkan pelan perlindungan Takaful yang lengkap dan jelas bersesuaian dengan bajet keluarga anda.</p>
                 
+                <!-- Buttons are now thicker to match the other pages -->
                 <div class="flex flex-col sm:flex-row gap-4 mt-8">
-                    <a href="#borang-semakan" class="btn-primary flex-1 !rounded-full">
+                    <a href="#borang-semakan" class="btn-primary flex-1">
                         <i class="fas fa-clipboard-check text-lg"></i> Semak Pelan Sesuai
                     </a>
-                    <a href="https://wa.me/60176213432" target="_blank" class="inline-flex flex-1 items-center justify-center gap-2 whitespace-nowrap cursor-pointer transition-colors border shadow-sm h-12 rounded-full border-teal/40 bg-teal-soft px-8 text-sm font-semibold text-teal hover:bg-teal hover:text-white">
+                    <a href="https://wa.me/60176213432" target="_blank" class="inline-flex flex-1 items-center justify-center gap-2 whitespace-nowrap cursor-pointer transition-colors border shadow-sm min-h-[3.5rem] rounded-full border-teal/40 bg-teal-soft px-8 text-sm md:text-base font-semibold text-teal hover:bg-teal hover:text-white">
                         <i class="fab fa-whatsapp text-lg"></i> WhatsApp Saya
                     </a>
                 </div>
@@ -279,7 +282,7 @@
                         <textarea id="clientMessage" class="form-input h-auto min-h-[100px] py-3" placeholder="Tulis soalan atau nota khas anda di sini..."></textarea>
                     </div>
 
-                    <button type="submit" class="btn-primary w-full !h-14 mt-4 text-base">Hantar Ke WhatsApp <i class="fab fa-whatsapp ml-1"></i></button>
+                    <button type="submit" class="btn-primary w-full mt-4 text-base">Hantar Ke WhatsApp <i class="fab fa-whatsapp ml-1 text-lg"></i></button>
                 </form>
             </div>
         </section>
