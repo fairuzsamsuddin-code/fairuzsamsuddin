@@ -130,9 +130,7 @@
         <!-- Features Section -->
         <section class="bg-white rounded-3xl shadow-soft border border-gray-100 p-8 md:p-12 text-center">
             <div class="relative flex flex-col md:flex-row justify-center gap-10 md:gap-5 items-center">
-                <!-- Line background for desktop -->
                 <div class="hidden md:block absolute top-1/2 left-[10%] right-[10%] h-0.5 bg-teal -translate-y-1/2 z-0"></div>
-                <!-- Line background for mobile -->
                 <div class="block md:hidden absolute top-[10%] bottom-[10%] left-1/2 w-0.5 bg-teal -translate-x-1/2 z-0"></div>
 
                 <div class="flex flex-col items-center gap-4 flex-1 z-10 bg-white md:bg-transparent px-4">
@@ -237,11 +235,11 @@
                         <label class="form-label"><span data-translate="label_income">Pendapatan Tahunan</span> <span class="text-primary">*</span></label>
                         <select id="clientIncome" class="form-input" required>
                             <option value="" disabled selected data-translate="opt_income">Pilih Anggaran Pendapatan</option>
-                            <option value="Bawah RM24,000">Bawah RM24,000</option>
+                            <option value="Bawah RM24,000" data-translate="inc_1">Bawah RM24,000</option>
                             <option value="RM24,000 - RM36,000">RM24,000 - RM36,000</option>
                             <option value="RM36,000 - RM48,000">RM36,000 - RM48,000</option>
                             <option value="RM48,000 - RM60,000">RM48,000 - RM60,000</option>
-                            <option value="RM60,000 ke atas">RM60,000 ke atas</option>
+                            <option value="RM60,000 ke atas" data-translate="inc_5">RM60,000 ke atas</option>
                         </select>
                     </div>
 
@@ -252,7 +250,7 @@
                             <option value="RM50 - RM200">RM50 - RM200</option>
                             <option value="RM201 - RM300">RM201 - RM300</option>
                             <option value="RM301 - RM400">RM301 - RM400</option>
-                            <option value="RM401 ke atas">RM401 ke atas</option>
+                            <option value="RM401 ke atas" data-translate="bud_4">RM401 ke atas</option>
                         </select>
                     </div>
 
@@ -263,8 +261,8 @@
                             <option value="Medical Card">Medical Card</option>
                             <option value="Hibah Takaful">Hibah Takaful</option>
                             <option value="Income Protection">Income Protection</option>
-                            <option value="Sakit Kritikal">Sakit Kritikal</option>
-                            <option value="Pendidikan Anak">Pendidikan Anak</option>
+                            <option value="Sakit Kritikal" data-translate="prot_critical">Sakit Kritikal</option>
+                            <option value="Pendidikan Anak" data-translate="prot_child">Pendidikan Anak</option>
                             <option value="Belum Pasti / Nak Konsultasi" data-translate="opt_consult">Belum Pasti / Nak Konsultasi</option>
                         </select>
                     </div>
@@ -346,8 +344,13 @@
                 opt_single: "Bujang",
                 opt_married: "Berkahwin",
                 opt_income: "Pilih Anggaran Pendapatan",
+                inc_1: "Bawah RM24,000",
+                inc_5: "RM60,000 ke atas",
                 opt_budget: "Pilih Anggaran Bajet",
+                bud_4: "RM401 ke atas",
                 opt_protection: "Pilih Perlindungan Utama",
+                prot_critical: "Sakit Kritikal",
+                prot_child: "Pendidikan Anak",
                 opt_consult: "Belum Pasti / Nak Konsultasi",
                 radio_yes: "Ya, sudah ada",
                 radio_no: "Tidak, belum ada",
@@ -398,8 +401,13 @@
                 opt_single: "Single",
                 opt_married: "Married",
                 opt_income: "Select Estimated Income",
+                inc_1: "Under RM24,000",
+                inc_5: "RM60,000 and above",
                 opt_budget: "Select Estimated Budget",
+                bud_4: "RM401 and above",
                 opt_protection: "Select Main Protection",
+                prot_critical: "Critical Illness",
+                prot_child: "Children Education",
                 opt_consult: "Unsure / Need Consultation",
                 radio_yes: "Yes, already have",
                 radio_no: "No, don't have yet",
