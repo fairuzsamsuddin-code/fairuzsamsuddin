@@ -53,9 +53,9 @@
 </head>
 <body class="bg-background text-gray-800 antialiased min-h-screen flex flex-col">
 
-    <!-- Unified Top Navigation Bar -->
+    <!-- Unified Top Navigation Bar (Sticky, always visible) -->
     <nav class="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
-        <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 gap-4 overflow-x-auto scrollbar-none">
+        <div class="mx-auto flex max-w-6xl items-center px-4 py-3 gap-5 overflow-x-auto scrollbar-none">
             <!-- Brand -->
             <a href="#top" class="flex items-center gap-3 shrink-0">
                 <img src="FS-logo.png" alt="FS Logo" class="h-10 w-10 object-contain">
@@ -64,9 +64,14 @@
                     <span class="mt-1 text-[11px] font-medium text-gray-500 leading-none" data-translate="brand_sub">by Fairuz Samsuddin</span>
                 </div>
             </a>
+
+            <!-- Language Toggle Button placed second -->
+            <button onclick="toggleLanguage()" id="langBtn" class="flex items-center gap-1.5 rounded-full border border-gray-300 bg-gray-50 px-3 py-2 text-xs font-bold text-gray-700 shadow-sm transition-colors hover:bg-gray-100 shrink-0">
+                <i class="fas fa-globe text-primary"></i> <span id="langText">EN</span>
+            </button>
             
             <!-- Navigation Links -->
-            <div class="flex items-center gap-6 shrink-0">
+            <div class="flex items-center gap-5 shrink-0">
                 <a href="#profil" class="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors py-1">
                     <i class="far fa-user text-gray-400 text-lg"></i>
                     <span class="text-xs font-bold whitespace-nowrap" data-translate="nav_profile">Profil</span>
@@ -81,11 +86,8 @@
                 </a>
             </div>
             
-            <!-- CTA & Language Toggle -->
-            <div class="flex items-center gap-3 shrink-0">
-                <button onclick="toggleLanguage()" id="langBtn" class="flex items-center gap-1.5 rounded-full border border-gray-300 bg-gray-50 px-3 py-2 text-xs font-bold text-gray-700 shadow-sm transition-colors hover:bg-gray-100">
-                    <i class="fas fa-globe text-primary"></i> <span id="langText">EN</span>
-                </button>
+            <!-- WhatsApp CTA pushed to the right -->
+            <div class="ml-auto flex items-center shrink-0">
                 <a href="https://wa.me/60176213432" target="_blank" class="flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs font-bold text-white shadow-sm transition-colors hover:bg-primary-hover">
                     <i class="fab fa-whatsapp text-base"></i> WhatsApp
                 </a>
@@ -97,7 +99,7 @@
     <main class="flex-grow max-w-5xl mx-auto w-full px-4 py-10 space-y-16">
 
         <!-- Profile Section -->
-        <section id="profil" class="bg-white rounded-3xl shadow-elegant border border-gray-100 p-8 md:p-10 flex flex-col md:flex-row gap-10 items-center scroll-mt-24">
+        <section id="profil" class="bg-white rounded-3xl shadow-elegant border border-gray-100 p-8 md:p-10 flex flex-col md:flex-row gap-10 items-center scroll-mt-28">
             <div class="w-48 h-48 md:w-56 md:h-56 shrink-0 rounded-[2rem] overflow-hidden border-4 border-white shadow-lg relative">
                 <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-teal/20 rounded-[2rem]"></div>
                 <img src="profile.jpg" alt="Profile Picture" class="w-full h-full object-cover relative z-10 rounded-[1.8rem]">
@@ -149,7 +151,7 @@
         </section>
 
         <!-- Selection Grid Section -->
-        <section id="pilihan-pelan" class="scroll-mt-24">
+        <section id="pilihan-pelan" class="scroll-mt-28">
             <div class="mb-6 text-center md:text-left">
                 <h2 class="text-2xl font-bold text-gray-900" data-translate="grid_title">Pilihan Yang Boleh Disemak</h2>
                 <p class="text-sm text-gray-500 mt-1"><i class="fas fa-hand-pointer text-primary"></i> <span data-translate="grid_subtitle">Klik kad di bawah untuk memilih</span></p>
@@ -172,7 +174,7 @@
         </section>
 
         <!-- Form Section -->
-        <section id="borang-semakan" class="bg-white rounded-3xl shadow-elegant border border-gray-100 overflow-hidden scroll-mt-24">
+        <section id="borang-semakan" class="bg-white rounded-3xl shadow-elegant border border-gray-100 overflow-hidden scroll-mt-28">
             <div class="bg-gradient-to-r from-primary to-[#b8000b] text-white p-8 text-center">
                 <span class="bg-white/20 text-white px-4 py-1.5 rounded-full text-xs font-bold inline-block mb-4 backdrop-blur-sm tracking-wider uppercase" data-translate="form_badge">Konsultasi Percuma</span>
                 <h3 class="text-2xl md:text-3xl font-bold mb-2" data-translate="form_title">Semak Pelan Takaful Sesuai</h3>
@@ -530,3 +532,4 @@
     </script>
 </body>
 </html>
+
