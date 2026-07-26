@@ -420,11 +420,11 @@
             }
         };
 
-        let currentLang = 'ms';
+        let currentLang = 'bm';
 
         function toggleLanguage() {
-            currentLang = currentLang === 'ms' ? 'en' : 'ms';
-            document.getElementById('langText').innerText = currentLang === 'ms' ? 'EN' : 'MS';
+            currentLang = currentLang === 'bm' ? 'en' : 'bm';
+            document.getElementById('langText').innerText = currentLang === 'bm' ? 'EN' : 'BM';
             document.getElementById('htmlTag').setAttribute('lang', currentLang);
 
             // Update all elements with data-translate attribute
@@ -496,7 +496,7 @@
             
             var phoneNumber = "60176213432"; 
             
-            var message = (currentLang === 'ms') 
+            var message = (currentLang === 'bm') 
                 ? "Hai, saya berminat untuk buat semakan pelan Takaful percuma. Ini butiran saya:\n\n" +
                   "👤 *Nama:* " + name + "\n" +
                   "📅 *Tarikh Lahir:* " + dob + "\n" +
@@ -519,9 +519,9 @@
                   "📋 *Active Policy:* " + policy;
             
             if(addMessage.trim() !== "") {
-                message += (currentLang === 'ms') ? "\n\n📝 *Nota Tambahan:*\n" + addMessage : "\n\n📝 *Additional Notes:*\n" + addMessage;
+                message += (currentLang === 'bm') ? "\n\n📝 *Nota Tambahan:*\n" + addMessage : "\n\n📝 *Additional Notes:*\n" + addMessage;
             } else {
-                message += (currentLang === 'ms') ? "\n\nMohon bantu saya untuk sediakan sebut harga yang sesuai." : "\n\nPlease help me prepare a suitable quotation.";
+                message += (currentLang === 'bm') ? "\n\nMohon bantu saya untuk sediakan sebut harga yang sesuai." : "\n\nPlease help me prepare a suitable quotation.";
             }
                           
             var encodedMessage = encodeURIComponent(message);
