@@ -67,7 +67,7 @@
             </a>
 
             <!-- Language Toggle -->
-            <button onclick="toggleLanguage()" id="langBtn" class="flex items-center gap-1.5 rounded-full border border-gray-300 bg-gray-50 px-3 py-2 text-xs font-bold text-gray-700 shadow-sm transition-colors hover:bg-gray-100 shrink-0">
+            <button type="button" onclick="toggleLanguage()" id="langBtn" class="flex items-center gap-1.5 rounded-full border border-gray-300 bg-gray-50 px-3 py-2 text-xs font-bold text-gray-700 shadow-sm transition-colors hover:bg-gray-100 shrink-0">
                 <i class="fas fa-globe text-primary"></i> <span id="langText">EN</span>
             </button>
             
@@ -748,14 +748,16 @@
 
         function toggleLanguage() {
             currentLang = currentLang === 'ms' ? 'en' : 'ms';
-            document.getElementById('langText').innerText = currentLang === 'ms' ? 'EN' : 'MS';
+            
+            // When current language is 'ms', button shows 'EN' (to switch to English). When current language is 'en', button shows 'BM' (to switch to Bahasa Melayu).
+            document.getElementById('langText').innerText = currentLang === 'ms' ? 'EN' : 'BM';
             document.getElementById('htmlTag').setAttribute('lang', currentLang);
 
             // Update all elements with data-translate attribute
             const elements = document.querySelectorAll('[data-translate]');
             elements.forEach(el => {
                 const key = el.getAttribute('data-translate');
-                if (translations[currentLang][key]) {
+                if (translations[currentLang] && translations[currentLang][key]) {
                     el.innerText = translations[currentLang][key];
                 }
             });
@@ -780,6 +782,8 @@
                 document.getElementById('needsCalculatorForm').dispatchEvent(new Event('submit'));
             }
         }
+
+        let currentLang = 'ms';
 
         function selectPlan(planName, clickedElement) {
             var cards = document.querySelectorAll('.grid-card');
