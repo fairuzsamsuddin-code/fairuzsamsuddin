@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>TAKAFUL SERVICES - Fairuz Samsuddin</title>
   <meta name="author" content="Fairuz Samsuddin" />
-  <meta name="description" content="Kalkulator keperluan perlindungan, semakan pelan takaful percuma dan peluang kerjaya bersama Fairuz Samsuddin." />
+  <meta name="description" content="Semakan pelan takaful percuma dan peluang kerjaya bersama Fairuz Samsuddin." />
   <meta name="theme-color" content="#f5f5f7" />
   <meta name="color-scheme" content="light" />
 
@@ -79,23 +79,6 @@
     .row.col label{padding:12px 0 4px}
     .row textarea{border:0;background:transparent;font:16px var(--sf);color:var(--fg);padding:4px 0 12px;min-height:110px;resize:vertical;outline:none}
     .req{color:var(--red);margin-left:2px}
-    /* amount / unit fields: prefix or suffix sits on the same line box as the digits */
-    .fld{flex:0 1 46%;min-width:0;display:flex;align-items:center;justify-content:flex-end;gap:6px}
-    .fld span{flex:none;font-size:16px;line-height:22px;color:var(--mut)}
-    .row .fld input{flex:1 1 auto;width:100%;line-height:22px;font-variant-numeric:tabular-nums}
-    /* rows with a helper line: value lines up with the label's first line, not the middle of the block */
-    .row.tip{align-items:flex-start}
-    .row.tip label>span{display:block;line-height:22px}
-    .row.tip .fld{padding:12px 0}.row.tip .fld input{padding:0}
-    .row input[type=number]{-moz-appearance:textfield;appearance:textfield}
-    .row input[type=number]::-webkit-inner-spin-button,.row input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
-    .hint{margin:8px 18px 0;font-size:13px;line-height:1.45;color:var(--mut)}
-
-    .pill{display:inline-flex;align-items:center;border-radius:999px;font-weight:600;font-size:12px;line-height:16px;padding:5px 11px;white-space:nowrap;font-variant-numeric:tabular-nums}
-    .p-ok{background:var(--tint);color:var(--tintFg)}.p-red{background:var(--redBg);color:var(--redFg)}
-    .note{background:var(--amberBg);border-radius:16px;padding:14px 16px;display:flex;gap:10px;font-size:14px;line-height:1.5;color:var(--fg)}
-    .note.bad{background:var(--redBg);color:var(--redFg)}
-    .note .ic{color:var(--amberIc);margin-top:1px}.note.bad .ic{color:var(--redFg)}
 
     /* hero */
     .hero{text-align:center;padding:56px 0 8px;scroll-margin-top:80px}
@@ -113,17 +96,6 @@
     .chips{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);display:flex;gap:4px;padding:5px;border-radius:999px;max-width:calc(100% - 24px);background:rgba(30,30,32,.32);border:1px solid rgba(255,255,255,.35);-webkit-backdrop-filter:blur(26px);backdrop-filter:blur(26px)}
     .chips span{padding:9px 16px;border-radius:999px;color:#fff;font-size:14px;line-height:18px;font-weight:500;white-space:nowrap}
     .chips span:first-child{background:rgba(255,255,255,.26)}
-
-    /* calculator results */
-    .res{padding:20px 22px}
-    .res-h{display:flex;align-items:center;gap:12px}
-    .res-h small{flex:1 1 0;min-width:0;font-size:15px;font-weight:600;line-height:1.3}
-    .res-i{flex:none;width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:var(--tint);color:var(--tintFg)}
-    .res-i.r{background:var(--redBg);color:var(--redFg)}
-    .res-v{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:12px}
-    .res-v b{font-size:30px;line-height:1.1;letter-spacing:-.035em;font-weight:700;font-variant-numeric:tabular-nums}
-    .res p{margin:12px 0 0;padding-top:12px;border-top:.5px solid var(--line2);font-size:13px;line-height:1.5;color:var(--mut)}
-    .res p strong{color:var(--fg)}
 
     /* plan + career cards */
     .plan{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:132px;padding:22px 16px;border:0;font:600 16px var(--sf);color:var(--fg);text-align:center;cursor:pointer;box-shadow:inset 0 0 0 1.5px transparent;transition:box-shadow .2s}
@@ -153,7 +125,6 @@
       .hero{padding:32px 0 0}
       .hp{height:62vw;border-radius:22px;background-size:auto 100%;background-position:100% center}
       .chips span{padding:7px 9px;font-size:11.5px;line-height:15px}
-      .row .fld{flex-basis:44%}
       .row>input{flex-basis:58%}
     }
     @media(max-width:960px){
@@ -177,9 +148,9 @@
     }
     @media(max-width:360px){
       .abar .btn{padding:0 12px;font-size:14px;gap:6px}
-      .row:not(.tip):not(.col){flex-wrap:wrap;row-gap:0}
-      .row:not(.tip):not(.col)>label{flex-basis:100%;padding-bottom:0}
-      .row:not(.tip):not(.col)>input,.row:not(.tip):not(.col)>select{flex:1 1 100%;padding-top:4px;text-align:left;text-align-last:left}
+      .row:not(.col){flex-wrap:wrap;row-gap:0}
+      .row:not(.col)>label{flex-basis:100%;padding-bottom:0}
+      .row:not(.col)>input,.row:not(.col)>select{flex:1 1 100%;padding-top:4px;text-align:left;text-align-last:left}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.plan{transition:none}}
   </style>
@@ -195,7 +166,6 @@
     </a>
     <div class="navlinks">
       <a href="#profil"><span class="lf" data-i18n="nav_profile">Profil</span><span class="ls" data-i18n="nav_profile_s">Profil</span></a>
-      <a href="#kalkulator-keperluan"><span class="lf" data-i18n="nav_calc">Kalkulator</span><span class="ls" data-i18n="nav_calc_s">Kalkulator</span></a>
       <a href="#pilihan-pelan"><span class="lf" data-i18n="nav_plans">Pilihan Pelan</span><span class="ls" data-i18n="nav_plans_s">Pelan</span></a>
       <a href="#borang-semakan"><span class="lf" data-i18n="nav_form">Borang Semakan</span><span class="ls" data-i18n="nav_form_s">Borang</span></a>
       <a href="#kerjaya"><span class="lf" data-i18n="nav_career">Kerjaya</span><span class="ls" data-i18n="nav_career_s">Kerjaya</span></a>
@@ -239,76 +209,8 @@
       </div>
     </section>
 
-    <!-- Takaful Needs Calculator -->
-    <section id="kalkulator-keperluan" class="split" style="margin-top:72px">
-      <div>
-        <p class="kk" data-i18n="calc_badge">Kalkulator Interaktif</p>
-        <h2 class="h2s" data-i18n="calc_title">Kalkulator Keperluan Perlindungan</h2>
-        <p class="sub" data-i18n="calc_subtitle">Kira anggaran keperluan kewangan untuk diri &amp; keluarga.</p>
-      </div>
-      <div class="stack">
-        <form id="needsCalculatorForm" class="stack">
-          <div>
-            <p class="gh" data-i18n="calc_grp_income">Pendapatan &amp; Hutang</p>
-            <div class="group">
-              <div class="row tip"><label for="calcIncome"><span data-i18n="calc_income">Pendapatan Bulanan</span><small data-i18n="tip_income">Gaji asas, sewa, dan pendapatan lain.</small></label><div class="fld"><span>RM</span><input type="text" inputmode="numeric" id="calcIncome" class="calc-currency" placeholder="0" required></div></div>
-              <div class="row tip"><label for="calcExpenses"><span data-i18n="calc_expenses">Perbelanjaan Bulanan</span><small data-i18n="tip_expenses">Cth: Ansuran rumah, bil, makanan, petrol, dan caruman Takaful.</small></label><div class="fld"><span>RM</span><input type="text" inputmode="numeric" id="calcExpenses" class="calc-currency" placeholder="0" required></div></div>
-              <div class="row tip"><label for="calcDebt"><span data-i18n="calc_debt">Hutang Tertunggak</span><small data-i18n="tip_debt">Cth: Baki keseluruhan pembiayaan kereta, pinjaman peribadi, kad kredit.</small></label><div class="fld"><span>RM</span><input type="text" inputmode="numeric" id="calcDebt" class="calc-currency" placeholder="0" required></div></div>
-            </div>
-          </div>
-          <div>
-            <p class="gh" data-i18n="calc_grp_life">Hayat / Hibah</p>
-            <div class="group">
-              <div class="row tip"><label for="calcExistLife"><span data-i18n="calc_exist_life">Hayat/Hibah Sedia Ada</span><small data-i18n="tip_exist_life">Jumlah pampasan perlindungan sedia ada jika berlaku kematian.</small></label><div class="fld"><span>RM</span><input type="text" inputmode="numeric" id="calcExistLife" class="calc-currency" placeholder="0" required></div></div>
-              <div class="row tip"><label for="calcLifeYears"><span data-i18n="calc_life_years">Tahun Sokongan Diperlukan</span><small data-i18n="tip_life_years">Berapa tahun pendapatan keluarga perlu disokong selepas ketiadaan (Cadangan: 10 tahun).</small></label><div class="fld"><input type="number" id="calcLifeYears" value="10" min="1" max="50" required><span data-i18n="calc_years">Tahun</span></div></div>
-            </div>
-          </div>
-          <div>
-            <p class="gh" data-i18n="calc_grp_ci">Sakit Kritikal</p>
-            <div class="group">
-              <div class="row tip"><label for="calcExistCI"><span data-i18n="calc_exist_ci">Sakit Kritikal Sedia Ada</span><small data-i18n="tip_exist_ci">Jumlah pampasan tunai sedia ada jika disahkan menghidap penyakit kritikal.</small></label><div class="fld"><span>RM</span><input type="text" inputmode="numeric" id="calcExistCI" class="calc-currency" placeholder="0" required></div></div>
-              <div class="row tip"><label for="calcCIYears"><span data-i18n="calc_ci_years">Sokongan Pendapatan Sakit Kritikal Diperlukan</span><small data-i18n="tip_ci_years">Anggaran cuti rehat dari bekerja untuk tujuan rawatan penyembuhan (Cadangan: 3 tahun).</small></label><div class="fld"><input type="number" id="calcCIYears" value="3" min="1" max="20" required><span data-i18n="calc_years">Tahun</span></div></div>
-            </div>
-          </div>
-          <div>
-            <p class="gh" data-i18n="calc_grp_med">Perubatan</p>
-            <div class="group">
-              <div class="row tip"><label for="calcExistMed"><span data-i18n="calc_exist_med">Had Tahunan Perubatan Sedia Ada</span><small data-i18n="tip_exist_med">Had limit perubatan daripada polisi peribadi atau kad syarikat sedia ada.</small></label><div class="fld"><span>RM</span><input type="text" inputmode="numeric" id="calcExistMed" class="calc-currency" placeholder="0" required></div></div>
-              <div class="row tip"><label for="calcTargetMed"><span data-i18n="calc_target_med">Had Tahunan Perubatan Diinginkan</span><small data-i18n="tip_target_med">Sasaran perlindungan tahunan untuk bayaran bil hospital (Cth: RM200,000).</small></label><div class="fld"><span>RM</span><input type="text" inputmode="numeric" id="calcTargetMed" class="calc-currency" placeholder="200,000" required></div></div>
-            </div>
-          </div>
-          <div class="note bad" id="errorAlert" role="alert" hidden>
-            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
-            <span data-i18n="calc_error">Nota: Perbelanjaan bulanan anda melebihi pendapatan bulanan. Sila semak semula.</span>
-          </div>
-          <div><button type="submit" class="btn" data-i18n="calc_btn">Kira Keperluan Semasa</button></div>
-        </form>
-
-        <!-- Calculator results -->
-        <div id="calcResults" class="stack" aria-live="polite" hidden style="margin-top:16px">
-          <h3 style="margin:0;font-size:20px;letter-spacing:-.02em" data-i18n="calc_res_title">Ringkasan Keperluan Perlindungan Anda</h3>
-          <div class="card res">
-            <div class="res-h"><span class="res-i r"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span><small data-i18n="calc_res_life">Keperluan Hayat / Hibah</small></div>
-            <div class="res-v"><b id="resLifeReq">RM 0</b><span id="resLifeGap" class="pill p-ok"></span></div>
-            <p id="descLife"></p>
-          </div>
-          <div class="card res">
-            <div class="res-h"><span class="res-i r"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span><small data-i18n="calc_res_ci">Keperluan Sakit Kritikal</small></div>
-            <div class="res-v"><b id="resCIReq">RM 0</b><span id="resCIGap" class="pill p-ok"></span></div>
-            <p id="descCI"></p>
-          </div>
-          <div class="card res">
-            <div class="res-h"><span class="res-i"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9zM14 3v6h6M12 11v6M9 14h6"/></svg></span><small data-i18n="calc_res_med">Sasaran Had Perubatan</small></div>
-            <div class="res-v"><b id="resMedReq">RM 0</b><span id="resMedGap" class="pill p-ok"></span></div>
-            <p id="descMed"></p>
-          </div>
-          <p class="hint" style="margin:0" data-i18n="calc_disclaimer">* Anggaran ini adalah rujukan asas. Gunakan borang di bawah untuk mendapatkan konsultasi terperinci bersama Fairuz Samsuddin.</p>
-        </div>
-      </div>
-    </section>
-
     <!-- Plan options -->
-    <section id="pilihan-pelan" class="block">
+    <section id="pilihan-pelan" class="block" style="margin-top:72px">
       <p class="kk" data-i18n="nav_plans">Pilihan Pelan</p>
       <h2 class="h2l" data-i18n="grid_title">Pilihan Yang Boleh Disemak</h2>
       <p class="subl" data-i18n="grid_subtitle">Klik kad di bawah untuk memilih</p>
@@ -453,8 +355,6 @@
         brand_sub: "by Fairuz Samsuddin",
         nav_profile_s: "Profil",
         nav_profile: "Profil",
-        nav_calc_s: "Kalkulator",
-        nav_calc: "Kalkulator",
         nav_plans_s: "Pelan",
         nav_plans: "Pilihan Pelan",
         nav_form_s: "Borang",
@@ -474,45 +374,6 @@
         plan_hibah: "Hibah",
         plan_income: "Income Protection",
         plan_critical: "Sakit Kritikal",
-
-        // Calculator Dictionary
-        calc_badge: "Kalkulator Interaktif",
-        calc_title: "Kalkulator Keperluan Perlindungan",
-        calc_subtitle: "Kira anggaran keperluan kewangan untuk diri & keluarga.",
-        calc_grp_income: "Pendapatan & Hutang",
-        calc_grp_life: "Hayat / Hibah",
-        calc_grp_ci: "Sakit Kritikal",
-        calc_grp_med: "Perubatan",
-        calc_error: "Nota: Perbelanjaan bulanan anda melebihi pendapatan bulanan. Sila semak semula.",
-        calc_income: "Pendapatan Bulanan",
-        calc_expenses: "Perbelanjaan Bulanan",
-        calc_debt: "Hutang Tertunggak",
-        calc_exist_life: "Hayat/Hibah Sedia Ada",
-        calc_life_years: "Tahun Sokongan Diperlukan",
-        calc_exist_ci: "Sakit Kritikal Sedia Ada",
-        calc_ci_years: "Sokongan Pendapatan Sakit Kritikal Diperlukan",
-        calc_exist_med: "Had Tahunan Perubatan Sedia Ada",
-        calc_target_med: "Had Tahunan Perubatan Diinginkan",
-        calc_years: "Tahun",
-        calc_btn: "Kira Keperluan Semasa",
-        calc_res_title: "Ringkasan Keperluan Perlindungan Anda",
-        calc_res_life: "Keperluan Hayat / Hibah",
-        calc_res_ci: "Keperluan Sakit Kritikal",
-        calc_res_med: "Sasaran Had Perubatan",
-        calc_shortfall: "Kekurangan: ",
-        calc_covered: "Dilindungi Penuh",
-        calc_disclaimer: "* Anggaran ini adalah rujukan asas. Gunakan borang di bawah untuk mendapatkan konsultasi terperinci bersama Fairuz Samsuddin.",
-
-        // Calculator Tooltips
-        tip_income: "Gaji asas, sewa, dan pendapatan lain.",
-        tip_expenses: "Cth: Ansuran rumah, bil, makanan, petrol, dan caruman Takaful.",
-        tip_debt: "Cth: Baki keseluruhan pembiayaan kereta, pinjaman peribadi, kad kredit.",
-        tip_exist_life: "Jumlah pampasan perlindungan sedia ada jika berlaku kematian.",
-        tip_life_years: "Berapa tahun pendapatan keluarga perlu disokong selepas ketiadaan (Cadangan: 10 tahun).",
-        tip_exist_ci: "Jumlah pampasan tunai sedia ada jika disahkan menghidap penyakit kritikal.",
-        tip_ci_years: "Anggaran cuti rehat dari bekerja untuk tujuan rawatan penyembuhan (Cadangan: 3 tahun).",
-        tip_exist_med: "Had limit perubatan daripada polisi peribadi atau kad syarikat sedia ada.",
-        tip_target_med: "Sasaran perlindungan tahunan untuk bayaran bil hospital (Cth: RM200,000).",
 
         // Career Section Dictionary
         career_badge: "Peluang Kerjaya",
@@ -580,8 +441,6 @@
         brand_sub: "by Fairuz Samsuddin",
         nav_profile_s: "Profile",
         nav_profile: "Profile",
-        nav_calc_s: "Calculator",
-        nav_calc: "Calculator",
         nav_plans_s: "Plans",
         nav_plans: "Plan Options",
         nav_form_s: "Form",
@@ -601,45 +460,6 @@
         plan_hibah: "Hibah",
         plan_income: "Income Protection",
         plan_critical: "Critical Illness",
-
-        // Calculator Dictionary
-        calc_badge: "Interactive Calculator",
-        calc_title: "Protection Needs Calculator",
-        calc_subtitle: "Estimate financial requirements for you & your family.",
-        calc_grp_income: "Income & Debt",
-        calc_grp_life: "Life / Hibah",
-        calc_grp_ci: "Critical Illness",
-        calc_grp_med: "Medical",
-        calc_error: "Note: Your monthly expenses exceed your monthly income. Please double-check.",
-        calc_income: "Monthly Income",
-        calc_expenses: "Monthly Expenses",
-        calc_debt: "Outstanding Debt",
-        calc_exist_life: "Existing Life / Hibah",
-        calc_life_years: "Years of Support Needed",
-        calc_exist_ci: "Existing Critical Illness",
-        calc_ci_years: "Income Support Needed (Critical Illness)",
-        calc_exist_med: "Existing Annual Medical Limit",
-        calc_target_med: "Desired Annual Medical Limit",
-        calc_years: "Years",
-        calc_btn: "Calculate Current Needs",
-        calc_res_title: "Your Protection Needs Summary",
-        calc_res_life: "Life / Hibah Needs",
-        calc_res_ci: "Critical Illness Needs",
-        calc_res_med: "Target Medical Limit",
-        calc_shortfall: "Shortfall: ",
-        calc_covered: "Fully Covered",
-        calc_disclaimer: "* This estimate serves as a basic reference. Use the form below for a detailed consultation with Fairuz Samsuddin.",
-
-        // Calculator Tooltips
-        tip_income: "Basic salary, rental, and other monthly earnings.",
-        tip_expenses: "Ex: Mortgage, bills, food, petrol, and Takaful contributions.",
-        tip_debt: "Ex: Total outstanding balance of car loans, personal loans, credit cards.",
-        tip_exist_life: "Total existing lump sum payout in the event of death.",
-        tip_life_years: "How many years your family needs financial support if you pass away (Rule of thumb: 10 years).",
-        tip_exist_ci: "Existing lump sum payout provided if diagnosed with a critical illness.",
-        tip_ci_years: "Estimated recovery time taken off work for medical treatment (Rule of thumb: 3 years).",
-        tip_exist_med: "Current annual limit from personal or employer provided medical cards.",
-        tip_target_med: "Target annual protection limit for hospital bills (Ex: RM 200,000).",
 
         // Career Section Dictionary
         career_badge: "Career Opportunity",
@@ -714,103 +534,12 @@
       document.querySelectorAll('[data-i18n]').forEach(function (el) { var v = t[el.getAttribute('data-i18n')]; if (v != null) el.textContent = v; });
       document.querySelectorAll('[data-i18n-ph]').forEach(function (el) { var v = t[el.getAttribute('data-i18n-ph')]; if (v != null) el.placeholder = v; });
       document.querySelectorAll('[data-lang]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === currentLang)); });
-      if (!$('calcResults').hidden) renderResults(false);
     }
 
     function selectPlan(btn) {
       document.querySelectorAll('.plan').forEach(function (c) { c.setAttribute('aria-pressed', String(c === btn)); });
       $('clientPlan').value = btn.getAttribute('data-plan');
       $('borang-semakan').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function parseCurrencyInput(value) {
-      if (!value) return 0;
-      return parseFloat(value.replace(/,/g, '')) || 0;
-    }
-
-    function formatCurrency(amount) {
-      return 'RM ' + Math.max(0, amount).toLocaleString('en-MY', { maximumFractionDigits: 0 });
-    }
-
-    function renderGap(element, gap) {
-      var t = translations[currentLang];
-      if (gap > 0) {
-        element.textContent = t.calc_shortfall + formatCurrency(gap);
-        element.className = 'pill p-red';
-      } else {
-        element.textContent = t.calc_covered;
-        element.className = 'pill p-ok';
-      }
-    }
-
-    // Number Rolling Animation function
-    function animateValue(obj, start, end, duration) {
-      var startTimestamp = null;
-      var step = function (timestamp) {
-        if (!startTimestamp) startTimestamp = timestamp;
-        var progress = Math.min((timestamp - startTimestamp) / duration, 1);
-        var easeOutQuad = progress * (2 - progress);
-        var currentVal = Math.floor(easeOutQuad * (end - start) + start);
-        obj.textContent = formatCurrency(progress < 1 ? currentVal : end);
-        if (progress < 1) window.requestAnimationFrame(step);
-      };
-      window.requestAnimationFrame(step);
-    }
-
-    // Takaful Calculator Logic (same formulas as before)
-    function renderResults(animate) {
-      var alertBox = $('errorAlert');
-
-      var income = parseCurrencyInput($('calcIncome').value);
-      var expenses = parseCurrencyInput($('calcExpenses').value);
-      var debt = parseCurrencyInput($('calcDebt').value);
-      var existingLife = parseCurrencyInput($('calcExistLife').value);
-      var lifeYears = parseFloat($('calcLifeYears').value) || 0;
-      var existingCI = parseCurrencyInput($('calcExistCI').value);
-      var ciYears = parseFloat($('calcCIYears').value) || 0;
-      var existingMedical = parseCurrencyInput($('calcExistMed').value);
-      var desiredMedical = parseCurrencyInput($('calcTargetMed').value);
-
-      alertBox.hidden = !(expenses > income);
-
-      var incomeAnnual = income * 12;
-      var lifeRequired = (incomeAnnual * lifeYears) + debt;
-      var lifeGap = lifeRequired - existingLife;
-
-      var ciRequired = (incomeAnnual * ciYears);
-      var ciGap = ciRequired - existingCI;
-
-      var medicalRequired = desiredMedical;
-      var medicalGap = medicalRequired - existingMedical;
-
-      var descLifeMs = '<strong>Kenapa Jumlah Ini?:</strong> Menggantikan pendapatan tahunan anda (RM ' + incomeAnnual.toLocaleString('en-MY') + ') selama ' + lifeYears + ' tahun, ditambah dengan penyelesaian hutang tertunggak (RM ' + debt.toLocaleString('en-MY') + '). Dana ini memastikan keluarga anda boleh meneruskan kelangsungan hidup tanpa dibebani hutang.';
-      var descLifeEn = '<strong>Why This Amount?:</strong> Replacing your annual income (RM ' + incomeAnnual.toLocaleString('en-MY') + ') for ' + lifeYears + ' years, plus clearing your outstanding debts (RM ' + debt.toLocaleString('en-MY') + '). This ensures your family can maintain their lifestyle debt-free.';
-
-      var descCIMs = '<strong>Kenapa Jumlah Ini?:</strong> Menggantikan pendapatan tahunan anda (RM ' + incomeAnnual.toLocaleString('en-MY') + ') selama ' + ciYears + ' tahun. Dana ini membolehkan anda berehat dan fokus sepenuhnya pada rawatan penyembuhan tanpa tekanan hilang punca pendapatan.';
-      var descCIEn = '<strong>Why This Amount?:</strong> Replacing your annual income (RM ' + incomeAnnual.toLocaleString('en-MY') + ') for ' + ciYears + ' years. This allows you to take time off work and focus on treatment and recovery without financial stress.';
-
-      var descMedMs = '<strong>Kenapa Jumlah Ini?:</strong> Berdasarkan sasaran had pilihan perlindungan tahunan anda. Had yang mencukupi amat penting bagi menampung bil rawatan hospital swasta selari dengan inflasi kos perubatan semasa.';
-      var descMedEn = '<strong>Why This Amount?:</strong> Based on your desired annual protection limit. An adequate limit is crucial to cover private hospital bills and counter rising medical inflation costs.';
-
-      if (animate) {
-        animateValue($('resLifeReq'), 0, lifeRequired, 1500);
-        animateValue($('resCIReq'), 0, ciRequired, 1500);
-        animateValue($('resMedReq'), 0, medicalRequired, 1500);
-      } else {
-        $('resLifeReq').textContent = formatCurrency(lifeRequired);
-        $('resCIReq').textContent = formatCurrency(ciRequired);
-        $('resMedReq').textContent = formatCurrency(medicalRequired);
-      }
-
-      var ms = currentLang === 'ms';
-      renderGap($('resLifeGap'), lifeGap);
-      $('descLife').innerHTML = ms ? descLifeMs : descLifeEn;
-      renderGap($('resCIGap'), ciGap);
-      $('descCI').innerHTML = ms ? descCIMs : descCIEn;
-      renderGap($('resMedGap'), medicalGap);
-      $('descMed').innerHTML = ms ? descMedMs : descMedEn;
-
-      $('calcResults').hidden = false;
     }
 
     // WhatsApp Career Submission
@@ -841,21 +570,6 @@
           value = value.slice(0, 2) + '/' + value.slice(2);
         }
         e.target.value = value;
-      });
-
-      // Thousands separators on RM inputs
-      document.querySelectorAll('.calc-currency').forEach(function (input) {
-        input.addEventListener('input', function () {
-          var rawValue = this.value.replace(/\D/g, '');
-          this.value = rawValue ? parseInt(rawValue, 10).toLocaleString('en-MY') : '';
-        });
-      });
-
-      $('needsCalculatorForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-        var firstTime = $('calcResults').hidden;
-        renderResults(true);
-        if (firstTime) $('calcResults').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       });
 
       // WhatsApp Form Submission Logic
