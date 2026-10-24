@@ -34,6 +34,7 @@
     .navlinks{display:flex;gap:2px;margin-left:auto;min-width:0}
     .navlinks a{color:var(--fg);font-size:13px;padding:8px 10px;border-radius:999px;white-space:nowrap}.navlinks a:hover{background:var(--fill);text-decoration:none}
     .navr{display:flex;gap:6px;align-items:center;flex:none}
+    .navlinks .ls{display:none}
 
     /* controls */
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 24px;border-radius:999px;background:var(--teal);color:#fff;font:500 16px var(--sf);border:0;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 6px 18px rgba(0,129,131,.3)}
@@ -139,11 +140,13 @@
     .abar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;display:flex;gap:6px;max-width:calc(100% - 24px);padding:6px;border-radius:999px}
     .abar .btn{font-size:15px;white-space:nowrap}
 
-    @media(max-width:760px){
+    @media(max-width:900px){
       .nav{flex-wrap:wrap;border-radius:24px;padding:8px 8px 4px 10px;row-gap:2px}
       .navr{margin-left:auto}
       .navlinks{order:3;flex-basis:100%;margin-left:-6px;overflow-x:auto;scrollbar-width:none}
       .navlinks::-webkit-scrollbar{display:none}
+    }
+    @media(max-width:760px){
       .split{grid-template-columns:minmax(0,1fr);row-gap:18px;padding:36px 0}
       .block{padding:36px 0}
       .h2l{font-size:30px}
@@ -159,10 +162,20 @@
       .row.stk label{flex-basis:100%;padding-bottom:0}
       .row.stk select{flex:1 1 100%;padding-top:4px;text-align:left;text-align-last:left}
     }
-    @media(max-width:560px){.chips span:nth-child(3){display:none}}
-    @media(max-width:420px){.brand small{display:none}.wrap{padding:0 16px}}
+    @media(max-width:560px){
+      .chips span:nth-child(3){display:none}
+      .nav-wa{width:36px;padding:0}
+      .navlinks{margin-left:0;justify-content:space-between}
+      .nav-wa .wa-t{display:none}
+      .navlinks .lf{display:none}.navlinks .ls{display:inline}
+    }
+    @media(max-width:420px){.brand small{display:none}.seg button{padding:0 10px}.wrap{padding:0 16px}}
+    @media(max-width:374px){
+      .nav{gap:6px;padding-left:8px}.brand{gap:6px}.brand img{width:30px;height:30px}.brand b{font-size:12px}
+      .seg button{padding:0 8px}
+      .navlinks a{padding:8px 6px;font-size:12.5px}
+    }
     @media(max-width:360px){
-      .brand>span{display:none}
       .abar .btn{padding:0 12px;font-size:14px;gap:6px}
       .row:not(.tip):not(.col){flex-wrap:wrap;row-gap:0}
       .row:not(.tip):not(.col)>label{flex-basis:100%;padding-bottom:0}
@@ -181,20 +194,20 @@
       <span><b data-i18n="brand_title">TAKAFUL SERVICES</b><small data-i18n="brand_sub">by Fairuz Samsuddin</small></span>
     </a>
     <div class="navlinks">
-      <a href="#profil" data-i18n="nav_profile">Profil</a>
-      <a href="#kalkulator-keperluan" data-i18n="nav_calc">Kalkulator</a>
-      <a href="#pilihan-pelan" data-i18n="nav_plans">Pilihan Pelan</a>
-      <a href="#borang-semakan" data-i18n="nav_form">Borang Semakan</a>
-      <a href="#kerjaya" data-i18n="nav_career">Kerjaya</a>
+      <a href="#profil"><span class="lf" data-i18n="nav_profile">Profil</span><span class="ls" data-i18n="nav_profile_s">Profil</span></a>
+      <a href="#kalkulator-keperluan"><span class="lf" data-i18n="nav_calc">Kalkulator</span><span class="ls" data-i18n="nav_calc_s">Kalkulator</span></a>
+      <a href="#pilihan-pelan"><span class="lf" data-i18n="nav_plans">Pilihan Pelan</span><span class="ls" data-i18n="nav_plans_s">Pelan</span></a>
+      <a href="#borang-semakan"><span class="lf" data-i18n="nav_form">Borang Semakan</span><span class="ls" data-i18n="nav_form_s">Borang</span></a>
+      <a href="#kerjaya"><span class="lf" data-i18n="nav_career">Kerjaya</span><span class="ls" data-i18n="nav_career_s">Kerjaya</span></a>
     </div>
     <div class="navr">
       <div class="seg" role="group" aria-label="Bahasa / Language">
         <button type="button" data-lang="ms" aria-pressed="true">BM</button>
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
       </div>
-      <a class="btn btn-s" href="https://wa.me/60176213432" target="_blank" rel="noopener noreferrer">
+      <a class="btn btn-s nav-wa" href="https://wa.me/60176213432" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.4A9 9 0 1 1 21 12z"/></svg>
-        WhatsApp
+        <span class="wa-t">WhatsApp</span>
       </a>
     </div>
   </nav>
@@ -438,10 +451,15 @@
         page_title: "TAKAFUL SERVICES - Fairuz Samsuddin",
         brand_title: "TAKAFUL SERVICES",
         brand_sub: "by Fairuz Samsuddin",
+        nav_profile_s: "Profil",
         nav_profile: "Profil",
+        nav_calc_s: "Kalkulator",
         nav_calc: "Kalkulator",
+        nav_plans_s: "Pelan",
         nav_plans: "Pilihan Pelan",
+        nav_form_s: "Borang",
         nav_form: "Borang Semakan",
+        nav_career_s: "Kerjaya",
         nav_career: "Kerjaya",
         profile_role: "Perunding Takaful Berdaftar PruBSN",
         profile_desc: "Membantu anda mendapatkan pelan perlindungan Takaful yang lengkap dan jelas bersesuaian dengan bajet keluarga anda.",
@@ -560,10 +578,15 @@
         page_title: "TAKAFUL SERVICES - Fairuz Samsuddin",
         brand_title: "TAKAFUL SERVICES",
         brand_sub: "by Fairuz Samsuddin",
+        nav_profile_s: "Profile",
         nav_profile: "Profile",
+        nav_calc_s: "Calculator",
         nav_calc: "Calculator",
+        nav_plans_s: "Plans",
         nav_plans: "Plan Options",
+        nav_form_s: "Form",
         nav_form: "Review Form",
+        nav_career_s: "Career",
         nav_career: "Career",
         profile_role: "Authorized PruBSN Takaful Consultant",
         profile_desc: "Helping you secure comprehensive and clear Takaful protection plans suited to your family budget.",
