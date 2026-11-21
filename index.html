@@ -17,57 +17,58 @@
     :root{color-scheme:light;--bg:#f5f5f7;--card:#fff;--fg:#1d1d1f;--mut:#6e6e73;--mut2:#424245;--hero1:#86868b;--line:#d2d2d7;--line2:#e5e5ea;--teal:#008183;--tealT:#00696b;--red:#D9000D;--tint:#e2f3f3;--tintFg:#00605f;--amberBg:#fff8ec;--amberFg:#8a4b00;--amberIc:#a35a00;--redBg:#fde8e9;--redFg:#a8000a;--glass:rgba(255,255,255,.62);--glassB:rgba(255,255,255,.85);--fill:rgba(118,118,128,.14);--track:#e8e8ed;--sf:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",Inter,system-ui,"Segoe UI",Roboto,sans-serif}
     *{box-sizing:border-box}
     html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-    body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sf);letter-spacing:-.01em;-webkit-font-smoothing:antialiased;line-height:1.4;overflow-x:hidden}
+    body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sf);letter-spacing:0;-webkit-font-smoothing:antialiased;line-height:1.4;overflow-x:hidden}
     a{color:var(--tealT);text-decoration:none}a:hover{text-decoration:underline}
     img{max-width:100%}
     [hidden]{display:none!important}
     :focus-visible{outline:3px solid rgba(0,129,131,.45);outline-offset:2px}
-    .wrap{max-width:1000px;margin:0 auto;padding:0 22px}
-    .lgl{background:var(--glass);-webkit-backdrop-filter:blur(30px) saturate(190%);backdrop-filter:blur(30px) saturate(190%);border:1px solid var(--glassB);box-shadow:inset 0 1px 0 var(--glassB),0 12px 34px rgba(0,0,0,.10)}
+    .wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+    .lgl{background:var(--card);border:1px solid rgba(29,29,31,.08)}
 
     /* nav */
-    .nav{position:sticky;top:calc(10px + env(safe-area-inset-top,0px));z-index:40;max-width:1040px;width:calc(100% - 24px);margin:10px auto 0;padding:7px 8px 7px 12px;border-radius:999px;display:flex;align-items:center;gap:10px}
-    .brand{display:flex;align-items:center;gap:10px;flex:none;color:var(--fg)}.brand:hover{text-decoration:none}
-    .brand img{width:34px;height:34px;border-radius:9px;background:#fff;object-fit:contain}
-    .brand b{display:block;font-size:14px;letter-spacing:-.01em;color:var(--red)}
+    .nav{position:sticky;top:calc(12px + env(safe-area-inset-top,0px));z-index:40;max-width:1040px;width:calc(100% - 24px);margin:12px auto 0;padding:8px 8px 8px 12px;border-radius:16px;display:flex;align-items:center;gap:8px}
+    .brand{display:flex;align-items:center;gap:8px;flex:none;color:var(--fg)}.brand:hover{text-decoration:none}
+    .brand img{width:34px;height:34px;border-radius:8px;background:#fff;object-fit:contain}
+    .brand b{display:block;font-size:14px;font-weight:600;color:var(--fg)}
     .brand small{display:block;font-size:12px;color:var(--mut)}
     .navlinks{display:flex;gap:2px;margin-left:auto;min-width:0}
-    .navlinks a{color:var(--fg);font-size:13px;padding:8px 10px;border-radius:999px;white-space:nowrap}.navlinks a:hover{background:var(--fill);text-decoration:none}
+    .navlinks a{color:var(--fg);font-size:13px;padding:8px 12px;border-radius:8px;white-space:nowrap}.navlinks a:hover{background:var(--fill);text-decoration:none}
     .navr{display:flex;gap:6px;align-items:center;flex:none}
     .navlinks .ls{display:none}
 
     /* controls */
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 24px;border-radius:999px;background:var(--teal);color:#fff;font:500 16px var(--sf);border:0;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 6px 18px rgba(0,129,131,.3)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 24px;border-radius:10px;background:var(--teal);color:#fff;font:500 16px var(--sf);border:0;cursor:pointer;transition:background-color .15s ease-out}
     .btn:hover{background:#00706f;color:#fff;text-decoration:none}
-    .btn-s{min-height:36px;padding:0 14px;font-size:13px;font-weight:600}
-    .btn-t{background:transparent;color:var(--tealT);box-shadow:none}.btn-t:hover{background:var(--fill);color:var(--tealT)}
+    .btn-s{min-height:36px;padding:0 16px;font-size:13px;font-weight:500;border-radius:8px}
+    .btn-t{background:transparent;color:var(--tealT);box-shadow:none;padding:0 16px}.btn-t:hover{background:var(--fill);color:var(--tealT)}
     .btn-w{width:100%}
+    .hero-b .btn-t{padding:0 16px 0 0}.hero-b .btn-t:hover{background:transparent;text-decoration:underline}
     .seg{display:inline-flex;background:var(--fill);padding:2px;border-radius:999px}
-    .seg button,.seg label span{display:flex;align-items:center;justify-content:center;border:0;background:transparent;color:var(--fg);font:600 13px var(--sf);padding:0 14px;border-radius:999px;cursor:pointer;min-height:32px;white-space:nowrap}
-    .seg button[aria-pressed="true"],.seg input:checked+span{background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.12)}
+    .seg button,.seg label span{display:flex;align-items:center;justify-content:center;border:0;background:transparent;color:var(--fg);font:500 13px var(--sf);padding:0 12px;border-radius:999px;cursor:pointer;min-height:32px;white-space:nowrap}
+    .seg button[aria-pressed="true"],.seg input:checked+span{background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.12)}
     .seg label,.row .seg label{position:relative;display:flex;flex:none;padding:0}
     .seg input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
     .seg input:focus-visible+span{outline:3px solid rgba(0,129,131,.45);outline-offset:1px}
     .ic{width:18px;height:18px;flex:none}
 
     /* type */
-    .kk{margin:0 0 8px;font-size:14px;font-weight:600;color:var(--tealT)}
-    .h2s{margin:0;font-size:28px;line-height:1.12;letter-spacing:-.035em;font-weight:700}
-    .h2l{margin:0;font-size:40px;line-height:1.1;letter-spacing:-.035em;font-weight:700}
+    .kk{margin:0 0 8px;font-size:14px;font-weight:500;color:var(--tealT)}
+    .h2s{margin:0;font-size:28px;line-height:1.12;letter-spacing:-.02em;font-weight:500}
+    .h2l{margin:0;font-size:40px;line-height:1.12;letter-spacing:-.02em;font-weight:500}
     .sub{margin:12px 0 0;font-size:15px;line-height:1.45;color:var(--mut)}
-    .subl{margin:10px 0 0;max-width:640px;font-size:17px;line-height:1.45;color:var(--mut)}
+    .subl{margin:12px 0 0;max-width:640px;font-size:17px;line-height:1.45;color:var(--mut)}
 
     /* layout */
-    .split{display:grid;grid-template-columns:260px minmax(0,1fr);column-gap:44px;padding:52px 0;border-top:.5px solid var(--line);scroll-margin-top:80px}
-    .block{padding:52px 0;border-top:.5px solid var(--line);scroll-margin-top:80px}
+    .split{display:grid;grid-template-columns:260px minmax(0,1fr);column-gap:48px;padding:48px 0;border-top:.5px solid var(--line);scroll-margin-top:80px}
+    .block{padding:48px 0;border-top:.5px solid var(--line);scroll-margin-top:80px}
     .stack{display:flex;flex-direction:column;gap:16px}
     .bento{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin:28px 0 0;padding:0;list-style:none}
-    .card{background:var(--card);border-radius:22px}
-    .group{background:var(--card);border-radius:18px;overflow:hidden;margin:0;padding:0;list-style:none}
-    .gh{margin:0 0 8px 18px;font-size:13px;font-weight:600;color:var(--mut)}
+    .card{background:var(--card);border-radius:16px}
+    .group{background:var(--card);border-radius:16px;overflow:hidden;margin:0;padding:0;list-style:none}
+    .gh{margin:0 0 8px 16px;font-size:13px;font-weight:500;color:var(--mut)}
 
     /* iOS grouped rows */
-    .row{display:flex;align-items:center;gap:12px;min-height:56px;padding:4px 18px;border-bottom:.5px solid var(--line)}
+    .row{display:flex;align-items:center;gap:12px;min-height:56px;padding:4px 16px;border-bottom:.5px solid var(--line)}
     .row:last-child{border-bottom:0}
     .row:focus-within{background:var(--tint);box-shadow:inset 3px 0 0 var(--teal)}
     .row label{flex:1 1 0;min-width:0;font-size:16px;color:var(--fg);padding:12px 0}
@@ -81,36 +82,34 @@
     .req{color:var(--red);margin-left:2px}
 
     /* hero */
-    .hero{text-align:center;padding:56px 0 8px;scroll-margin-top:80px}
-    .avatar{display:block;width:112px;height:112px;margin:0 auto 18px;border-radius:999px;object-fit:cover;background:#fff;box-shadow:0 0 0 4px #fff,0 10px 28px rgba(0,0,0,.12)}
-    .hero-k{margin:0 0 10px;font-size:16px;font-weight:600;color:var(--red)}
-    .hero h1{margin:0 auto 20px;max-width:860px;font-size:clamp(40px,6.2vw,64px);line-height:1.04;letter-spacing:-.04em;font-weight:700}
-    .hero h1 span:first-child{color:var(--hero1)}
-    .hero-d{margin:0 auto;max-width:640px;font-size:clamp(17px,2.1vw,20px);line-height:1.45;color:var(--mut2)}
-    .hero-b{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:28px}
-    .social{display:flex;gap:10px;justify-content:center;margin-top:20px}
-    .social a{width:44px;height:44px;border-radius:999px;background:var(--card);color:var(--mut2);display:flex;align-items:center;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+    .hero{text-align:left;padding:56px 0 8px;scroll-margin-top:80px}
+    .avatar{display:block;width:88px;height:88px;margin:0 0 20px;border-radius:999px;object-fit:cover;background:#fff;border:1px solid rgba(29,29,31,.1)}
+    .hero-k{margin:0 0 12px;font-size:16px;font-weight:500;color:var(--tealT)}
+    .hero h1{margin:0 0 20px;max-width:760px;font-size:clamp(36px,5.6vw,60px);line-height:1.08;letter-spacing:-.025em;font-weight:500}
+    .hero-d{margin:0;max-width:640px;font-size:clamp(17px,2.1vw,20px);line-height:1.45;color:var(--mut2)}
+    .hero-b{display:flex;gap:8px;justify-content:flex-start;align-items:center;flex-wrap:wrap;margin-top:28px}
+    .social{display:flex;gap:8px;justify-content:flex-start;margin-top:16px}
+    .social a{width:44px;height:44px;border-radius:10px;background:transparent;color:var(--mut2);display:flex;align-items:center;justify-content:center;border:1px solid var(--line);transition:background-color .15s ease-out}
     .social a:hover{background:var(--tint);color:var(--tintFg);text-decoration:none}
     .social svg{width:20px;height:20px;display:block}
-    .hp{position:relative;margin-top:44px;height:400px;border-radius:30px;overflow:hidden;background:url(banner.jpg) 70% center/cover no-repeat}
-    .chips{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);display:flex;gap:4px;padding:5px;border-radius:999px;max-width:calc(100% - 24px);background:rgba(30,30,32,.32);border:1px solid rgba(255,255,255,.35);-webkit-backdrop-filter:blur(26px);backdrop-filter:blur(26px)}
-    .chips span{padding:9px 16px;border-radius:999px;color:#fff;font-size:14px;line-height:18px;font-weight:500;white-space:nowrap}
-    .chips span:first-child{background:rgba(255,255,255,.26)}
+    .hp{position:relative;margin-top:48px;height:400px;border-radius:20px;overflow:hidden;background:url(banner.jpg) 70% center/cover no-repeat}
+    .chips{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);display:flex;gap:4px;padding:4px;border-radius:14px;max-width:calc(100% - 24px);background:rgba(29,29,31,.6)}
+    .chips span{padding:8px 16px;border-radius:10px;color:#fff;font-size:14px;line-height:18px;font-weight:500;white-space:nowrap}
+    .chips span:first-child{background:rgba(255,255,255,.2)}
 
     /* plan + career cards */
-    .plan{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:132px;padding:22px 16px;border:0;font:600 16px var(--sf);color:var(--fg);text-align:center;cursor:pointer;box-shadow:inset 0 0 0 1.5px transparent;transition:box-shadow .2s}
+    .plan{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:132px;padding:24px 16px;border:0;font:600 16px var(--sf);color:var(--fg);text-align:center;cursor:pointer;box-shadow:inset 0 0 0 1.5px transparent;transition:box-shadow .15s ease-out}
     .plan:hover{box-shadow:inset 0 0 0 1.5px var(--line)}
     .plan[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--teal);background:#fbfefe}
-    .svc{padding:22px;display:flex;gap:16px;align-items:flex-start}
-    .svc-i{flex:none;width:44px;height:44px;border-radius:12px;background:var(--tint);color:var(--tintFg);display:flex;align-items:center;justify-content:center}
-    .svc h3{margin:0;font-size:17px;font-weight:600}.svc p{margin:4px 0 0;font-size:14px;line-height:1.45;color:var(--mut)}
+    .svc{padding:24px;display:flex;gap:16px;align-items:flex-start}
+    .svc-i{flex:none;width:44px;height:44px;border-radius:10px;background:var(--tint);color:var(--tintFg);display:flex;align-items:center;justify-content:center}
+    .svc h3{margin:0;font-size:17px;font-weight:500}.svc p{margin:4px 0 0;font-size:14px;line-height:1.45;color:var(--mut)}
 
-    footer{padding:28px 0 120px;border-top:.5px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--mut)}
+    footer{padding:32px 0 48px;border-top:.5px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--mut)}
     footer img{width:120px;height:auto;display:block;margin-bottom:8px}
 
-    /* sticky action bar */
-    .abar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;display:flex;gap:6px;max-width:calc(100% - 24px);padding:6px;border-radius:999px}
-    .abar .btn{font-size:15px;white-space:nowrap}
+    .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#1f9d4c;margin-right:8px;flex:none}
+
 
     @media(max-width:900px){
       .nav{flex-wrap:wrap;border-radius:24px;padding:8px 8px 4px 10px;row-gap:2px}
@@ -123,7 +122,7 @@
       .block{padding:36px 0}
       .h2l{font-size:30px}
       .hero{padding:32px 0 0}
-      .hp{height:62vw;border-radius:22px;background-size:auto 100%;background-position:100% center}
+      .hp{height:62vw;border-radius:16px;background-size:auto 100%;background-position:100% center}
       .chips span{padding:7px 9px;font-size:11.5px;line-height:15px}
       .row>input{flex-basis:58%}
     }
@@ -134,6 +133,9 @@
       .row.stk select{flex:1 1 100%;padding-top:4px;text-align:left;text-align-last:left}
     }
     @media(max-width:560px){
+      #planGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .plan{min-height:112px;padding:20px 12px}
+      .hero-b{gap:4px}
       .chips span:nth-child(3){display:none}
       .nav-wa{width:36px;padding:0}
       .navlinks{margin-left:0;justify-content:space-between}
@@ -147,7 +149,6 @@
       .navlinks a{padding:8px 6px;font-size:12.5px}
     }
     @media(max-width:360px){
-      .abar .btn{padding:0 12px;font-size:14px;gap:6px}
       .row:not(.col){flex-wrap:wrap;row-gap:0}
       .row:not(.col)>label{flex-basis:100%;padding-bottom:0}
       .row:not(.col)>input,.row:not(.col)>select{flex:1 1 100%;padding-top:4px;text-align:left;text-align-last:left}
@@ -188,17 +189,11 @@
     <section id="profil" class="hero">
       <img class="avatar" src="profile.jpg" alt="Fairuz Samsuddin" width="112" height="112">
       <p class="hero-k" data-i18n="profile_role">Perunding Takaful Berdaftar PruBSN</p>
-      <h1><span>Fairuz Samsuddin.</span> <span>Takaful Services.</span></h1>
+      <h1 data-i18n="hero_title">Perlindungan takaful yang jelas untuk keluarga anda</h1>
       <p class="hero-d" data-i18n="profile_desc">Membantu anda mendapatkan pelan perlindungan Takaful yang lengkap dan jelas bersesuaian dengan bajet keluarga anda.</p>
       <div class="hero-b">
-        <a class="btn" href="#borang-semakan" data-i18n="btn_check">Semak Pelan Sesuai</a>
-        <a class="btn btn-t" href="https://wa.me/60176213432" target="_blank" rel="noopener noreferrer"><span data-i18n="btn_whatsapp">WhatsApp Saya</span>&nbsp;›</a>
-      </div>
-      <div class="social">
-        <a href="https://www.facebook.com/fairuz.samsuddin" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H7.9v3h2.6V21z"/></svg></a>
-        <a href="https://www.instagram.com/rigidius/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.2 6.8h.01"/></svg></a>
-        <a href="https://threads.net/@rigidius" target="_blank" rel="noopener noreferrer" aria-label="Threads"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.2 8.4C16.3 5.6 14.3 4 11.6 4 7.6 4 5.5 7 5.5 12s2.1 8 6.3 8c3.2 0 5.6-1.8 5.6-4.6 0-2.9-2.5-4.1-5.4-3.8-2 .2-3.3 1.2-3.2 2.6.1 1.4 1.5 2.1 3 2 2.3-.2 3.4-2 3.4-5.4"/></svg></a>
-        <a href="https://tiktok.com/@rigidius" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3.5v11.2a3.7 3.7 0 1 1-3.7-3.7"/><path d="M14 3.5c.4 2.6 2.2 4.3 5 4.5"/></svg></a>
+        <a class="btn" href="#borang-semakan" data-i18n="btn_check">Semak pelan sesuai</a>
+        <a class="btn btn-t" href="https://wa.me/60176213432" target="_blank" rel="noopener noreferrer"><span class="dot" aria-hidden="true"></span><span data-i18n="btn_whatsapp">WhatsApp saya</span></a>
       </div>
       <div class="hp" role="img" aria-label="Keluarga di puncak bukit">
         <div class="chips" aria-hidden="true">
@@ -212,8 +207,8 @@
     <!-- Plan options -->
     <section id="pilihan-pelan" class="block" style="margin-top:72px">
       <p class="kk" data-i18n="nav_plans">Pilihan Pelan</p>
-      <h2 class="h2l" data-i18n="grid_title">Pilihan Yang Boleh Disemak</h2>
-      <p class="subl" data-i18n="grid_subtitle">Klik kad di bawah untuk memilih</p>
+      <h2 class="h2l" data-i18n="grid_title">Pilihan yang boleh disemak</h2>
+      <p class="subl" data-i18n="grid_subtitle">Pilih kad di bawah</p>
       <div class="bento" id="planGrid">
         <button type="button" class="card plan" data-plan="Medical Card" aria-pressed="false"><span class="svc-i"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span><span data-i18n="plan_med">Medical Card</span></button>
         <button type="button" class="card plan" data-plan="Hibah Takaful" aria-pressed="false"><span class="svc-i"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h18v4H3zM5 13v8h14v-8M12 9v12M12 9c-1.5-3-5-4-5-1.5S10 9 12 9zM12 9c1.5-3 5-4 5-1.5S14 9 12 9z"/></svg></span><span data-i18n="plan_hibah">Hibah</span></button>
@@ -225,13 +220,13 @@
     <!-- Review form -->
     <section id="borang-semakan" class="split">
       <div>
-        <p class="kk" data-i18n="form_badge">Konsultasi Percuma</p>
-        <h2 class="h2s" data-i18n="form_title">Semak Pelan Takaful Sesuai</h2>
+        <p class="kk" data-i18n="form_badge">Konsultasi percuma</p>
+        <h2 class="h2s" data-i18n="form_title">Semak pelan takaful yang sesuai</h2>
         <p class="sub"><span data-i18n="form_subtitle">Isi butiran ringkas. Mesej draf akan dihantar terus ke WhatsApp</span> <b style="color:var(--fg)">Fairuz Samsuddin</b>.</p>
       </div>
       <form id="takafulForm" class="stack">
         <div>
-          <p class="gh" data-i18n="form_grp_personal">Maklumat Peribadi</p>
+          <p class="gh" data-i18n="form_grp_personal">Maklumat peribadi</p>
           <div class="group">
             <div class="row"><label for="clientName"><span data-i18n="label_name">Nama Penuh</span><span class="req">*</span></label><input type="text" id="clientName" autocomplete="name" data-i18n-ph="ph_name" placeholder="Contoh: Ahmad" required></div>
             <div class="row"><label for="clientDob"><span data-i18n="label_dob">Tarikh Lahir</span><span class="req">*</span></label><input type="text" id="clientDob" inputmode="numeric" data-i18n-ph="ph_dob" placeholder="Contoh: 12/05/1990" maxlength="10" required></div>
@@ -261,7 +256,7 @@
           </div>
         </div>
         <div>
-          <p class="gh" data-i18n="form_grp_plan">Pelan &amp; Bajet</p>
+          <p class="gh" data-i18n="form_grp_plan">Pelan &amp; bajet</p>
           <div class="group">
             <div class="row stk"><label for="clientIncome"><span data-i18n="label_income">Pendapatan Tahunan</span><span class="req">*</span></label>
               <select id="clientIncome" required>
@@ -299,22 +294,22 @@
                 <label><input type="radio" name="polisiAktif" value="Tidak, belum ada" checked><span data-i18n="radio_no">Tidak, belum ada</span></label>
               </div>
             </div>
-            <div class="row col"><label for="clientMessage" data-i18n="label_msg">Mesej Tambahan (Optional)</label><textarea id="clientMessage" data-i18n-ph="ph_msg" placeholder="Tulis soalan atau nota khas anda di sini..."></textarea></div>
+            <div class="row col"><label for="clientMessage" data-i18n="label_msg">Mesej Tambahan (Optional)</label><textarea id="clientMessage" data-i18n-ph="ph_msg" placeholder="Tulis soalan atau nota anda"></textarea></div>
           </div>
         </div>
         <button type="submit" class="btn btn-w" style="min-height:50px">
           <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.4A9 9 0 1 1 21 12z"/></svg>
-          <span data-i18n="btn_submit">Hantar Ke WhatsApp</span>
+          <span data-i18n="btn_submit">Hantar ke WhatsApp</span>
         </button>
       </form>
     </section>
 
     <!-- Career -->
     <section id="kerjaya" class="block">
-      <p class="kk" data-i18n="career_badge">Peluang Kerjaya</p>
-      <h2 class="h2l" data-i18n="career_title">Sertai Pasukan Kami di Muqmeen Group</h2>
+      <p class="kk" data-i18n="career_badge">Peluang kerjaya</p>
+      <h2 class="h2l" data-i18n="career_title">Sertai pasukan kami di Muqmeen Group</h2>
       <p class="subl" data-i18n="career_subtitle">Bina kerjaya bermakna sebagai Perunding Takaful (Sepenuh Masa / Separuh Masa) dengan agensi No. 1 PruBSN Takaful.</p>
-      <div class="bento" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr))">
+      <div class="bento" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
         <div class="card svc"><span class="svc-i"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></span><div style="flex:1 1 0;min-width:0"><h3 data-i18n="career_ben1_title">Pendapatan Tanpa Had</h3><p data-i18n="career_ben1_desc">Komisen lumayan, bonus pencapaian &amp; elaun pembangunan bulanan.</p></div></div>
         <div class="card svc"><span class="svc-i"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div style="flex:1 1 0;min-width:0"><h3 data-i18n="career_ben2_title">Fleksibiliti Masa</h3><p data-i18n="career_ben2_desc">Masa bekerja yang fleksibel dan hibrid. Capai keseimbangan kerja &amp; kehidupan (Work-Life Balance).</p></div></div>
         <div class="card svc"><span class="svc-i"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5zM6 11v5c3 2 9 2 12 0v-5M22 9v6"/></svg></span><div style="flex:1 1 0;min-width:0"><h3 data-i18n="career_ben3_title">Latihan Profesional</h3><p data-i18n="career_ben3_desc">Bimbingan &amp; latihan berstruktur disediakan. Pengalaman tidak diwajibkan.</p></div></div>
@@ -323,7 +318,7 @@
       <div style="margin-top:24px">
         <button type="button" class="btn" id="careerBtn">
           <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
-          <span data-i18n="career_cta">Mohon Sekarang</span>
+          <span data-i18n="career_cta">Mohon sekarang</span>
         </button>
       </div>
     </section>
@@ -332,19 +327,17 @@
       <div>
         <img src="fsconsultancy-logo.png" alt="fsconsultancy" width="120" height="120">
         <span data-i18n="footer_reg">Perunding Takaful Berdaftar dengan PruBSN Takaful Berhad.</span>
+        <div class="social">
+        <a href="https://www.facebook.com/fairuz.samsuddin" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H7.9v3h2.6V21z"/></svg></a>
+        <a href="https://www.instagram.com/rigidius/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.2 6.8h.01"/></svg></a>
+        <a href="https://threads.net/@rigidius" target="_blank" rel="noopener noreferrer" aria-label="Threads"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.2 8.4C16.3 5.6 14.3 4 11.6 4 7.6 4 5.5 7 5.5 12s2.1 8 6.3 8c3.2 0 5.6-1.8 5.6-4.6 0-2.9-2.5-4.1-5.4-3.8-2 .2-3.3 1.2-3.2 2.6.1 1.4 1.5 2.1 3 2 2.3-.2 3.4-2 3.4-5.4"/></svg></a>
+        <a href="https://tiktok.com/@rigidius" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3.5v11.2a3.7 3.7 0 1 1-3.7-3.7"/><path d="M14 3.5c.4 2.6 2.2 4.3 5 4.5"/></svg></a>
+        </div>
       </div>
       <span>© 2026 Fairuz Samsuddin. <span data-i18n="footer_rights">Hak Cipta Terpelihara.</span> · <span data-i18n="footer_portal">Portal Servis Rasmi Fairuz Samsuddin</span></span>
     </footer>
   </main>
 
-  <!-- Sticky glass action bar -->
-  <div class="abar lgl">
-    <a class="btn btn-t" href="#borang-semakan" data-i18n="btn_check">Semak Pelan Sesuai</a>
-    <a class="btn" href="https://wa.me/60176213432" target="_blank" rel="noopener noreferrer">
-      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.4A9 9 0 1 1 21 12z"/></svg>
-      WhatsApp
-    </a>
-  </div>
 
   <script>
     // Language Dictionary Data
@@ -362,22 +355,23 @@
         nav_career_s: "Kerjaya",
         nav_career: "Kerjaya",
         profile_role: "Perunding Takaful Berdaftar PruBSN",
+        hero_title: "Perlindungan takaful yang jelas untuk keluarga anda",
         profile_desc: "Membantu anda mendapatkan pelan perlindungan Takaful yang lengkap dan jelas bersesuaian dengan bajet keluarga anda.",
-        btn_check: "Semak Pelan Sesuai",
-        btn_whatsapp: "WhatsApp Saya",
+        btn_check: "Semak pelan sesuai",
+        btn_whatsapp: "WhatsApp saya",
         feat_easy_transparent: "Mudah & Telus",
         feat_exclusive_guidance: "Bimbingan Eksklusif",
         feat_comprehensive_protection: "Perlindungan Menyeluruh",
-        grid_title: "Pilihan Yang Boleh Disemak",
-        grid_subtitle: "Klik kad di bawah untuk memilih",
+        grid_title: "Pilihan yang boleh disemak",
+        grid_subtitle: "Pilih kad di bawah",
         plan_med: "Medical Card",
         plan_hibah: "Hibah",
         plan_income: "Income Protection",
         plan_critical: "Sakit Kritikal",
 
         // Career Section Dictionary
-        career_badge: "Peluang Kerjaya",
-        career_title: "Sertai Pasukan Kami di Muqmeen Group",
+        career_badge: "Peluang kerjaya",
+        career_title: "Sertai pasukan kami di Muqmeen Group",
         career_subtitle: "Bina kerjaya bermakna sebagai Perunding Takaful (Sepenuh Masa / Separuh Masa) dengan agensi No. 1 PruBSN Takaful.",
         career_ben1_title: "Pendapatan Tanpa Had",
         career_ben1_desc: "Komisen lumayan, bonus pencapaian & elaun pembangunan bulanan.",
@@ -387,14 +381,14 @@
         career_ben3_desc: "Bimbingan & latihan berstruktur disediakan. Pengalaman tidak diwajibkan.",
         career_ben4_title: "Ganjaran Percutian",
         career_ben4_desc: "Peluang memenangi percutian mewah ke luar negara setiap tahun.",
-        career_cta: "Mohon Sekarang",
+        career_cta: "Mohon sekarang",
 
         // Form Dictionary
-        form_badge: "Konsultasi Percuma",
-        form_title: "Semak Pelan Takaful Sesuai",
+        form_badge: "Konsultasi percuma",
+        form_title: "Semak pelan takaful yang sesuai",
         form_subtitle: "Isi butiran ringkas. Mesej draf akan dihantar terus ke WhatsApp",
-        form_grp_personal: "Maklumat Peribadi",
-        form_grp_plan: "Pelan & Bajet",
+        form_grp_personal: "Maklumat peribadi",
+        form_grp_plan: "Pelan & bajet",
         label_name: "Nama Penuh",
         label_dob: "Tarikh Lahir",
         label_phone: "No Telefon",
@@ -411,7 +405,7 @@
         ph_dob: "Contoh: 12/05/1990",
         ph_phone: "Contoh: 0123456789",
         ph_job: "Cth: Executive, Polis",
-        ph_msg: "Tulis soalan atau nota khas anda di sini...",
+        ph_msg: "Tulis soalan atau nota anda",
         opt_select: "Pilih",
         opt_male: "Lelaki",
         opt_female: "Perempuan",
@@ -430,7 +424,7 @@
         opt_consult: "Belum Pasti / Nak Konsultasi",
         radio_yes: "Ya, sudah ada",
         radio_no: "Tidak, belum ada",
-        btn_submit: "Hantar Ke WhatsApp",
+        btn_submit: "Hantar ke WhatsApp",
         footer_reg: "Perunding Takaful Berdaftar dengan PruBSN Takaful Berhad.",
         footer_rights: "Hak Cipta Terpelihara.",
         footer_portal: "Portal Servis Rasmi Fairuz Samsuddin"
@@ -448,14 +442,15 @@
         nav_career_s: "Career",
         nav_career: "Career",
         profile_role: "Authorized PruBSN Takaful Consultant",
+        hero_title: "Clear Takaful protection for your family",
         profile_desc: "Helping you secure comprehensive and clear Takaful protection plans suited to your family budget.",
-        btn_check: "Check Suitable Plan",
-        btn_whatsapp: "WhatsApp Me",
+        btn_check: "Check a suitable plan",
+        btn_whatsapp: "WhatsApp me",
         feat_easy_transparent: "Easy & Transparent",
         feat_exclusive_guidance: "Exclusive Guidance",
         feat_comprehensive_protection: "Comprehensive Protection",
-        grid_title: "Available Plans to Review",
-        grid_subtitle: "Click a card below to select",
+        grid_title: "Available plans to review",
+        grid_subtitle: "Select a card below",
         plan_med: "Medical Card",
         plan_hibah: "Hibah",
         plan_income: "Income Protection",
@@ -463,7 +458,7 @@
 
         // Career Section Dictionary
         career_badge: "Career Opportunity",
-        career_title: "Join Our Team at Muqmeen Group",
+        career_title: "Join our team at Muqmeen Group",
         career_subtitle: "Build a meaningful career as a Takaful Consultant (Full-Time / Part-Time) with the top PruBSN Takaful agency.",
         career_ben1_title: "Unlimited Income",
         career_ben1_desc: "Attractive commissions, performance bonuses & monthly development allowance.",
@@ -473,11 +468,11 @@
         career_ben3_desc: "Structured coaching & training provided. No prior experience required.",
         career_ben4_title: "Travel Rewards",
         career_ben4_desc: "Opportunity to win luxury overseas trips every year.",
-        career_cta: "Apply Now",
+        career_cta: "Apply now",
 
         // Form Dictionary
         form_badge: "Free Consultation",
-        form_title: "Review Suitable Takaful Plan",
+        form_title: "Review a suitable Takaful plan",
         form_subtitle: "Fill in brief details. A draft message will be sent directly to WhatsApp",
         form_grp_personal: "Personal Details",
         form_grp_plan: "Plan & Budget",
@@ -497,7 +492,7 @@
         ph_dob: "Example: 12/05/1990",
         ph_phone: "Example: 0123456789",
         ph_job: "Ex: Executive, Police",
-        ph_msg: "Write your questions or special notes here...",
+        ph_msg: "Write your questions or notes",
         opt_select: "Select",
         opt_male: "Male",
         opt_female: "Female",
