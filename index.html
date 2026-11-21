@@ -104,14 +104,11 @@
     .svc-i{flex:none;width:44px;height:44px;border-radius:10px;background:var(--tint);color:var(--tintFg);display:flex;align-items:center;justify-content:center}
     .svc h3{margin:0;font-size:17px;font-weight:500}.svc p{margin:4px 0 0;font-size:14px;line-height:1.45;color:var(--mut)}
 
-    footer{padding:32px 0 120px;border-top:.5px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--mut)}
+    footer{padding:32px 0 48px;border-top:.5px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--mut)}
     footer img{width:120px;height:auto;display:block;margin-bottom:8px}
 
     .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#1f9d4c;margin-right:8px;flex:none}
 
-    /* sticky action bar */
-    .abar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;display:flex;gap:8px;max-width:calc(100% - 24px);padding:8px;border-radius:16px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
-    .abar .btn{font-size:15px;white-space:nowrap}
 
     @media(max-width:900px){
       .nav{flex-wrap:wrap;border-radius:24px;padding:8px 8px 4px 10px;row-gap:2px}
@@ -148,7 +145,6 @@
       .navlinks a{padding:8px 6px;font-size:12.5px}
     }
     @media(max-width:360px){
-      .abar .btn{padding:0 12px;font-size:14px;gap:6px}
       .row:not(.col){flex-wrap:wrap;row-gap:0}
       .row:not(.col)>label{flex-basis:100%;padding-bottom:0}
       .row:not(.col)>input,.row:not(.col)>select{flex:1 1 100%;padding-top:4px;text-align:left;text-align-last:left}
@@ -338,14 +334,6 @@
     </footer>
   </main>
 
-  <!-- Sticky glass action bar -->
-  <div class="abar lgl">
-    <a class="btn btn-t" href="#borang-semakan" data-i18n="btn_check">Semak pelan sesuai</a>
-    <a class="btn" href="https://wa.me/60176213432" target="_blank" rel="noopener noreferrer">
-      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.4A9 9 0 1 1 21 12z"/></svg>
-      WhatsApp
-    </a>
-  </div>
 
   <script>
     // Language Dictionary Data
