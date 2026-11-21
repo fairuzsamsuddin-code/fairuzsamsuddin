@@ -40,8 +40,9 @@
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 24px;border-radius:10px;background:var(--teal);color:#fff;font:500 16px var(--sf);border:0;cursor:pointer;transition:background-color .15s ease-out}
     .btn:hover{background:#00706f;color:#fff;text-decoration:none}
     .btn-s{min-height:36px;padding:0 16px;font-size:13px;font-weight:500;border-radius:8px}
-    .btn-t{background:transparent;color:var(--tealT);box-shadow:none}.btn-t:hover{background:var(--fill);color:var(--tealT)}
+    .btn-t{background:transparent;color:var(--tealT);box-shadow:none;padding:0 16px}.btn-t:hover{background:var(--fill);color:var(--tealT)}
     .btn-w{width:100%}
+    .hero-b .btn-t{padding:0 16px 0 0}.hero-b .btn-t:hover{background:transparent;text-decoration:underline}
     .seg{display:inline-flex;background:var(--fill);padding:2px;border-radius:999px}
     .seg button,.seg label span{display:flex;align-items:center;justify-content:center;border:0;background:transparent;color:var(--fg);font:500 13px var(--sf);padding:0 12px;border-radius:999px;cursor:pointer;min-height:32px;white-space:nowrap}
     .seg button[aria-pressed="true"],.seg input:checked+span{background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.12)}
@@ -132,6 +133,9 @@
       .row.stk select{flex:1 1 100%;padding-top:4px;text-align:left;text-align-last:left}
     }
     @media(max-width:560px){
+      #planGrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .plan{min-height:112px;padding:20px 12px}
+      .hero-b{gap:4px}
       .chips span:nth-child(3){display:none}
       .nav-wa{width:36px;padding:0}
       .navlinks{margin-left:0;justify-content:space-between}
